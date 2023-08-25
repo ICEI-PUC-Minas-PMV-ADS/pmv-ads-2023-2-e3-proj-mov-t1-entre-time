@@ -1,23 +1,25 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+CURSO: Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+DISCIPLINA: Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio
 
-`SEMESTRE`
+ SEMESTRE: Terceiro
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Daniel Mendes Rufino Silva
+- Fagner Vieira Pereira
+- Jeferson Felix dos Santos
+- Matheus Delay da Silva
+- Pedro Henrique da Silva Santos
+- Stephanye Castellano
 
 ## Orientador
 
-* Nome completo do professor 1
+- Will Ricardo dos Santos Machado
 
 ## Instruções de utilização
 
