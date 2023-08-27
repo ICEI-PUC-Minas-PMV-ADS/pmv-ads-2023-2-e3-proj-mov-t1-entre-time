@@ -8,12 +8,17 @@ Em muitas comunidades, empresas e organizações locais enfrentam desafios signi
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O projeto EntreTime tem como principais objetivos:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+- **Centralização de Eventos**: Criar uma plataforma centralizada onde empresas e organizações locais possam registrar e divulgar seus eventos, simplificando o processo de pesquisa e acesso a informações sobre eventos. 
+
+- **Aumento da Visibilidade**: Oferecer uma maneira eficaz de aumentar a visibilidade de eventos locais, alcançando um público mais amplo e diversificado por meio de recursos de promoção e compartilhamento. 
+
+- **Facilitar a Participação**: Incentivar a participação ativa da comunidade em eventos locais, proporcionando uma interface intuitiva para inscrições, compra de ingressos e interações entre os participantes e os organizadores. 
+
+- **Informações Detalhadas**: Fornecer informações detalhadas sobre os eventos, incluindo datas, horários, localização, descrições e detalhes relevantes, para que os interessados possam tomar decisões informadas sobre sua participação. 
+
+- **Personalização**: Permitir que os usuários personalizem suas preferências e interesses, recebendo recomendações personalizadas de eventos que correspondam às suas áreas de interesse. 
 
 ## Justificativa
 
