@@ -7,20 +7,26 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
-
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<ul>
+<li>Igor Carmenere: Baterista de uma banda de rock, 44 anos, divorciado. Tem disponibilidade para sair tanto nos finais de semana, quanto em dias de semana. Tem interesse em frequentar estabelecimentos que tenham música ao vivo, independentemente do tipo de música. Só não gosta de música sertaneja. </li>
+<br>
+<li>Marcia Arruda: 40 anos, proprietária de um bar no centro da cidade, com salário em média de 10mil reais, é formada em marketing e está sempre antenada em novas formas de divulgação. </li>
+<br>
+<li>Kelly Cristina: Jovem de 20 anos, solteira, cursando faculdade de Psicologia. Busca por todos os tipos de eventos com música eletrônica, como raves e night clubs. </li>
+<br>
+<li>Carlos Eduardo: Empresário, 31 anos. Possui uma empresa que reúne bandas para fazerem shows em restaurantes e bares. Ele está à procura de sistemas que auxiliem na divulgação de seus shows. </li>
+<br>
+<li>Nicolly Vignatti tem 24 anos e é formada em administração, trabalha na área de formação ganhando atualmente 2500 reais, nos finais de semana adora curtir um barzinho ou ir em algum show com os amigos. Compartilha um apto com sua melhor amiga e tem 2 gatos.  </li>
+<br>
+<li>Joaquim Pedro: tem 31 anos, formado em Agronomia e um entusiasta da música. Trabalha em uma empresa chamada “A de Agro”, tem um lucro mensal variável que fica entre R$3.500,00 a R$4.000,00 e sempre que tem um tempo de sobra, principalmente nos feriados e finais de semana, procura visitar novos bares e restaurantes com música ao-vivo em sua cidade, seja apenas para ouvir boa música, ou para tocar algumas quando possível. </li>
+ <br>
+<li>Gustavo Henrique: é um jovem de 20 anos completamente apaixonado pelo mundo dos Games desde muito novo. Hoje ele é um estudante na área de Desenvolvimento de Jogos Eletrônicos e que está sempre buscando por eventos relacionados a área, na sua cidade e nas cidades próximas, seja para aprimorar seus conhecimentos no desenvolvimento de games e se atualizar sobre as novidades do mercado, ou mesmo para simplesmente aproveitar os eventos como o grande fã de jogos eletrônicos que ele é. Recentemente ele foi contratado como estagiário pelo canal de TV chamado Esporte Interativo para atuar no programa chamado EI Games que como o nome já diz, é focado em Games.</li>  
+<br>
+<li>Mayara Rodrigues: Professora de português de 34 anos, mestranda. Tem seus horários um pouco confusos devido ao mestrado, porém sempre está em busca de eventos culturais mais alternativos. Adora MPB, artes e joga conversa fora.</li> 
+<br>
+<li>Ramon Gomes: Engenheiro Eletrotécnico de 28 anos, solteiro e sempre em busca locais movimentados e com gente. Adora baladas e pagodes. Sempre em busca de pessoas solteira para se relacionar.</li> 
+<br>
+</ul>
 
 ## Histórias de Usuários
 
@@ -86,23 +92,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| RNF-001 | A aplicação deve ser intuitiva e fácil de aprender para os usuários.  | ALTA | 
+| RNF-002 | A aplicação deve se adaptar a diferentes tamanhos de tela e orientações  |  MÉDIA |
+| RNF-003 | A aplicação deve funcionar no sistema Android  |  ALTA | 
+| RNF-004 | A aplicação deve exibir apenas eventos que restem no mínimo 3h para o final planejado  |  MÉDIA | 
+| RNF-005 | A aplicação deve estar disponível e funcionando corretamente durante a maior parte do tempo, com tempo de inatividade mínimo ou nulo.  |  MÉDIA | 
+| RNF-006 | A aplicação deve ter tempo se resposta menor que 2 segundo a cada requisição realizada.  |  MÉDIA | 
 
 ## Restrições
 
