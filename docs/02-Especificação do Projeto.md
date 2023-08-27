@@ -30,12 +30,19 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Igor Carmenere      | Encontrar bares que tocam música ao vivo| Poder conhecer novos lugares com esse tipo de entretenimento. Saber onde está acontecendo algum evento com música ao vivo |
+|Marcia Arruda       | Cadastrar o bar que ela é proprietária em um aplicativo chamativo | Alcançar variados tipos de clientes para aumentar o movimento do seu estabelecimento |
+| Kelly Cristina | Saber se terá e onde algum evento de música eletrônica nas próximas semanas| Evitar de ter de fazer diversas buscas no google e em redes sociais para encontrar o que precisa |
+| Carlos Eduardo | Conseguir cadastrar eventos do seu estabelecimento no aplicativo, com local, horário e tipo do evento | Conseguir divulgar seus shows com mais facilidade e com isso aumentar seu lucro |
+| Nicolly Vignatti | Manter-me antenada aos eventos da minha cidade e de outras que eu eventualmente for visitar | Aproveitar a vida noturna nos melhores eventos |
+| Joaquim Pedro | Buscar novos locais, sejam bares ou restaurantes que tenham um espaço alocado para eventos musicais | Encontrar novos locais para conhecer novas pessoas e aproveitar boa música/entretenimento |
+| Gustavo Henrique | Encontrar novos eventos, reuniões e festas voltadas à área dos Games | Para estudo, para aumentar sua rede de contatos ou apenas para entretenimento |
+| Mayara Rodrigues | Saber com facilidade onde estão os eventos culturais mais próximos de mim, com antecedência ou no mesmo dia | Planejar um dia legal sem muito esforço e possuindo informações suficientes para não me frustrar |
+| Ramon Gomes | Encontrar bares, eventos fechados ou abertos nas minha região, preferencialmente com avaliações, podendo buscar por datas ou estilos de ambiente | Divertir-me sem que tenha o transtorno de procurar em redes sociais, perguntar a amigos a satisfação. Ou seja, ter uma noite agradável com menor esforço e chance de arrependimento |  
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
