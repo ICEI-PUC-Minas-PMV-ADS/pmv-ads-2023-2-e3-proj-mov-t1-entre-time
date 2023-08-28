@@ -92,8 +92,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| A aplicação deve ter uma tela inicial onde será possível pesquisar os eventos e estabelecimentos que ofereçam algum tipo de entretenimento. | ALTA | 
+|RF-002| A aplicação deve ter páginas com eventos similares agrupados. | ALTA |
+|RF-003| A aplicação deve permitir verificar a agenda de um local específico. | BAIXA | 
+|RF-004| A aplicação deve dar para visualizar eventos em uma cidade distante da minha. | MÉDIA |
+|RF-005| A aplicação deve permitir o usuário filtrar a distância em quilometragem que ele esteja disposto a ir para um evento. | MÉDIA | 
+|RF-006| A aplicação deve visualizar os barzinhos mais populares da cidade. | MÉDIA |
+|RF-007| A aplicação deve permitir que o usuário avalie os locais e eventos que ele frequentou recentemente. | BAIXA | 
+|RF-008| A aplicação deve possibilitar o autogerenciamento de usuários. | BAIXA |
+|RF-009| A aplicação deve ter uma sessão de Suporte/Dúvidas. | BAIXA | 
+|RF-010| A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. | MÉDIA |
+|RF-011| A aplicação deve ser capaz de deixar o usuário visualizar eventos com base em sua geolocalização. | ALTA | 
+|RF-012| A aplicação deve permitir a consulta por períodos. | MÉDIA |
+|RF-013| A aplicação deve permitir consultar eventos de outras localizações. | MÈDIA | 
+|RF-014| A aplicação deve permitir o gerenciamento de usuários   | MÉDIA |
 
 ### Requisitos não Funcionais
 
