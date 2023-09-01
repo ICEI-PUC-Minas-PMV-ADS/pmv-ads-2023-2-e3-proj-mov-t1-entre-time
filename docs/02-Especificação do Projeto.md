@@ -86,7 +86,12 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+A equipe utilizou, para classificar os Requisitos, a técnica de Escala de Três Níveis, bem como o quadrante de priorização de acordo com questões de importância e urgência.
+
+![Quadrante Escala de Três Níveis](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/72119e3a-b8db-4a8e-93d2-49821707e778)
+
+
+
 
 ### Requisitos Funcionais
 
