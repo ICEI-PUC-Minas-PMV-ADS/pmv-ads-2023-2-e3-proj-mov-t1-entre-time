@@ -34,8 +34,8 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Igor Carmenere      | Encontrar bares que tocam música ao vivo| Poder conhecer novos lugares com esse tipo de entretenimento. Saber onde está acontecendo algum evento com música ao vivo |
-|Marcia Arruda       | Cadastrar o bar que ela é proprietária em um aplicativo chamativo | Alcançar variados tipos de clientes para aumentar o movimento do seu estabelecimento |
+| Igor Carmenere | Encontrar bares que tocam música ao vivo| Poder conhecer novos lugares com esse tipo de entretenimento. Saber onde está acontecendo algum evento com música ao vivo |
+| Marcia Arruda  | Cadastrar o bar que ela é proprietária em um aplicativo chamativo | Alcançar variados tipos de clientes para aumentar o movimento do seu estabelecimento |
 | Kelly Cristina | Saber se terá e onde algum evento de música eletrônica nas próximas semanas| Evitar de ter de fazer diversas buscas no google e em redes sociais para encontrar o que precisa |
 | Carlos Eduardo | Conseguir cadastrar eventos do seu estabelecimento no aplicativo, com local, horário e tipo do evento | Conseguir divulgar seus shows com mais facilidade e com isso aumentar seu lucro |
 | Nicolly Vignatti | Manter-me antenada aos eventos da minha cidade e de outras que eu eventualmente for visitar | Aproveitar a vida noturna nos melhores eventos |
@@ -93,29 +93,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| A aplicação deve ter uma tela inicial onde será possível pesquisar os eventos e estabelecimentos que ofereçam algum tipo de entretenimento. | ALTA | 
-|RF-002| A aplicação deve ter páginas com eventos similares agrupados. | ALTA |
-|RF-003| A aplicação deve permitir verificar a agenda de um local específico. | BAIXA | 
+|RF-002| A aplicação deve ter páginas com eventos similares agrupados. | MÉDIA |
+|RF-003| A aplicação deve permitir verificar a agenda de um local específico. | MÉDIA | 
 |RF-004| A aplicação deve dar para visualizar eventos em uma cidade distante da minha. | MÉDIA |
 |RF-005| A aplicação deve permitir o usuário filtrar a distância em quilometragem que ele esteja disposto a ir para um evento. | MÉDIA | 
-|RF-006| A aplicação deve visualizar os barzinhos mais populares da cidade. | MÉDIA |
+|RF-006| A aplicação deve visualizar os barzinhos mais populares da cidade. | BAIXA |
 |RF-007| A aplicação deve permitir que o usuário avalie os locais e eventos que ele frequentou recentemente. | BAIXA | 
-|RF-008| A aplicação deve possibilitar o autogerenciamento de usuários. | BAIXA |
+|RF-008| A aplicação deve possibilitar o autogerenciamento de usuários. | ALTA |
 |RF-009| A aplicação deve ter uma sessão de Suporte/Dúvidas. | BAIXA | 
 |RF-010| A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. | MÉDIA |
-|RF-011| A aplicação deve ser capaz de deixar o usuário visualizar eventos com base em sua geolocalização. | ALTA | 
+|RF-011| A aplicação deve ser capaz de deixar o usuário visualizar eventos com base em sua geolocalização. | MÉDIA | 
 |RF-012| A aplicação deve permitir a consulta por períodos. | MÉDIA |
-|RF-013| A aplicação deve permitir consultar eventos de outras localizações. | MÈDIA | 
-|RF-014| A aplicação deve permitir o gerenciamento de usuários   | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 | RNF-001 | A aplicação deve ser intuitiva e fácil de aprender para os usuários.  | ALTA | 
-| RNF-002 | A aplicação deve se adaptar a diferentes tamanhos de tela e orientações  |  MÉDIA |
+| RNF-002 | A aplicação deve se adaptar a diferentes tamanhos de tela e orientações  |  ALTA |
 | RNF-003 | A aplicação deve funcionar no sistema Android  |  ALTA | 
 | RNF-004 | A aplicação deve exibir apenas eventos que restem no mínimo 3h para o final planejado  |  MÉDIA | 
-| RNF-005 | A aplicação deve estar disponível e funcionando corretamente durante a maior parte do tempo, com tempo de inatividade mínimo ou nulo.  |  MÉDIA | 
+| RNF-005 | A aplicação deve estar disponível e funcionando corretamente durante a maior parte do tempo, com tempo de inatividade mínimo ou nulo.  | ALTA | 
 | RNF-006 | A aplicação deve ter tempo se resposta menor que 2 segundo a cada requisição realizada.  |  MÉDIA | 
 
 ## Restrições
