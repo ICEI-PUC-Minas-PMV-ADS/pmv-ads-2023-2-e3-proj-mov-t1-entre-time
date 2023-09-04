@@ -187,4 +187,7 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+Obs! Mesmo sabendo que alguns funções serão pessoas repetidas, tratamos como se estivessemos contratando pessoas diferentes, já que no mundo real as funções são desempenhadas por pessoas diferentes.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/f5591c56-47b0-4ade-b490-2c4eb8496bce)
+
