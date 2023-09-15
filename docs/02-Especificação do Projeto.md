@@ -57,17 +57,15 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Devido à falta de plataformas que divulgam de forma clara e atualizada as agendas, endereços, redes sociais ou mesmo sites de locais que ofereçam algum tipo de entretenimento, surgiu a necessidade da criação do aplicativo-EntreTime  para ajudar aqueles que procuram por diversão sem ter que perder muito tempo em buscas no Google, Redes Sociais ou algum outro meio.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta do  aplicativo-EntreTime  é oferecer uma plataforma onde seja possível encontrar, de forma clara e de fácil manuseio, informações relevantes de locais com algum tipo de entretenimento. Será possível, por meio da plataforma, filtrar tipos, locais e datas para a busca por diversão. Com o EntreTime,  Entre(tenimento) é no tempo(Time) que a pessoa tenha, e é facil encontrar.
 
 ### Processo 1 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-![Processo 1](img/02-bpmn-proc1.png)
+![Diagrama BPMN inicial EntreTime](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/313abca6-629c-4409-8cec-33edc9be2913)
 
 ### Processo 2 – NOME DO PROCESSO
 
