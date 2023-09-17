@@ -60,7 +60,7 @@ revisões necessárias, ele está agendado e pronto para a ação.
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código:
+- Editor de código: Visual Studio Code
 - Ferramentas de comunicação: Microsoft Teams, Email, WhatsApp.
 - Ferramentas de desenho de tela: Gimp, Lucidchart
 
