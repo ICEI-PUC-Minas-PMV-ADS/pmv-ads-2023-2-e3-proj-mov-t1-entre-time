@@ -21,16 +21,35 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 > - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
+#### Estamos utilizando o Figma para a criação de todo o projeto de interface até o momento. (OBS: Ainda não se trata da versão FINAL)</br>
+#### Para acessar a versão deste protótipo de interface com a Interação de Telas implementada e funcionando, basta acessar o link a seguir: </br></br> <a href="https://www.figma.com/proto/YgcLMeRdBzlQvWTvhpO6Nw/Protótipo-(Entre-Time)?type=design&node-id=9-26&t=m9LRIiROAHhqwA8b-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=9%3A26"><h2>Projeto de Interface Interativo Entre Time</h2></a>
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+### 01 - Home Page
+![Wireframe Home-Page](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Home_Page%20-%20Wireframes.JPG)
+
+### 02 - Eventos
+![Wireframe Eventos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Eventos%20-%20Wireframes.JPG)
+
+### 03 - Mais Informações do Evento
+![Wireframe Mais Informações do Evento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Mais%20informa%C3%A7%C3%B5es%20do%20Evento%20-%20Wireframes.JPG)
+
+### 04 - Adição de Eventos
+![Wireframe Adição de Eventos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Adi%C3%A7%C3%A3o%20de%20Eventos%20-%20Wireframes.JPG)
+
+### 05 - Fale Conosco
+![Wireframe Fale Conosco](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Fale%20Conosco%20-%20Wireframes.JPG)
+
+### 06 - FAQ
+![Wireframe FAQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/FAQ%20-%20Wireframes.JPG)</br>
+
+### 07 - Barra de Menu Lateral
+![Wireframe Barra de Menu Lateral](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Barra%20de%20Menu%20Lateral%20-%20Wireframes.JPG)
+
+### 08 - Overlay de Dúvidas e Respostas do FAQ
+![Wireframe Overlay de Dúvidas e Respostas do FAQ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Overlay%20de%20D%C3%BAvidas%20e%20Respostas%20do%20FAQ%20-%20Wireframes.JPG)
+
+### 09 - Overlay dos Filtros por Localização e Período
+![Wireframe Overlay dos Filtros por Localização e Período](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/blob/495f8702de9ec9b2362d3e6cc1301ca33d358ba2/docs/img/Overlay%20dos%20Filtros%20por%20Localiza%C3%A7%C3%A3o%20e%20Per%C3%ADodo%20-%20Wireframes.JPG)
+
+
