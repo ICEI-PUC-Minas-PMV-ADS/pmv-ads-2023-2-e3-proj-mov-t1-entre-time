@@ -25,11 +25,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+![Diagrama ER de banco de dados (pé de galinha)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/c5fd6a47-73c3-44b7-8b02-a658c8f96503)
 
 ## Modelo Físico
 
@@ -37,9 +33,10 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+- Linguagem: JavaScript / CSS
+- Bibliotecas: React Native
+- IDE: Visual Studio Code
+- Ferramentas: Microsoft Teams
 
 ## Hospedagem
 
@@ -54,15 +51,30 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+### 1. Funcionalidade:
+- Adequação funcional: Garantir que o aplicativo ofereça as funcionalidades necessárias para a divulgação de eventos.
+- Interoperabilidade: Permitir que o aplicativo se integre com outros serviços ou aplicativos relevantes, como redes sociais.
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+### 2. Confiabilidade:
+- Maturidade: Certificar-se de que o aplicativo seja confiável e livre de falhas significativas.
+- Tolerância a falhas: Garantir que o aplicativo continue funcionando de forma adequada mesmo em situações de falha.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+### 3.Usabilidade:
+- Compreensibilidade: Certificar-se de que a interface do usuário seja fácil de entender.
+- Aprendizagem: Facilitar o aprendizado do uso do aplicativo para novos usuários.
+- Eficiência de uso: Garantir que o aplicativo seja eficiente e não exija muito tempo ou esforço do usuário.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+### 4.Eficiência de Desempenho:
+- Desempenho em termos de tempo: Garantir que o aplicativo responda rapidamente às interações do usuário.
+- Utilização de recursos: Certificar-se de que o aplicativo utilize recursos do dispositivo (como bateria e CPU) de forma eficiente.
+
+### 5.Segurança:
+- Confidencialidade: Proteger informações confidenciais dos usuários e dados do evento.
+- Integridade: Garantir que os dados não sejam corrompidos ou alterados por terceiros não autorizados.
+
+### 6.Manutenibilidade:
+- Modificabilidade: Facilitar a manutenção e atualizações do aplicativo para adicionar novos recursos ou corrigir problemas.
+- Estabilidade: Garantir que as modificações não causem novos problemas.
+
+### 7.Compatibilidade:
+- Compatibilidade: Garantir que o aplicativo funcione em diferentes dispositivos móveis
