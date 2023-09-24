@@ -25,7 +25,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 
 ## Esquema Relacional
 
-![Diagrama ER de banco de dados (pé de galinha)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/68e557d8-7dd2-4c3c-86af-687f4f0da8eb)
+<img width="803" alt="Captura de Tela 2023-09-24 às 10 38 32" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/ec10c07a-51b2-4c42-aca4-383adf336c08">
 
 ## Modelo Físico
 
