@@ -75,6 +75,14 @@ A proposta do  aplicativo-EntreTime  é oferecer uma plataforma onde seja possí
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
+|Indicador   | Objetivo | Descrição | Cálculo | Fonte de Dados | Perspectiva |
+|------------|----------|-----------|---------|----------------|-------------|
+| Taxa de Cadastros de Usuários | Aumentar o número de cadastros de usuários no sistema | Mede a eficiência do processo de cadastro de usuários | (Número de novos cadastros / Total de usuários) * 100% | Classe Usuário, metódo Cadastrar | Gestão do sistema |
+| Taxa de Sucesso de Login | Garantir uma alta taxa de sucesso nos logins dos usuários | Mede a eficácia do processo de login no sistema | (Número de logins bem-sucedidos / Número total de tentativas de login) * 100% | Classe Usuario, metódo Login | Segurança do sistema |
+| Taxa de Eventos Criados por Empresários | Aumentar a criação de eventos pelos empresários | Mede a participação dos empresários na criação de eventos | (Número de eventos criados por empresários / Número total de eventos) * 100% | Classe Evento e Empresário | Engajamento dos empresários |
+| Taxa de Eventos Salvos por Consumidores | Aumentar o número de eventos salvos pelos consumidores | Mede a interação dos consumidores com os eventos | (Número de eventos salvos por consumidores / Número total de eventos) * 100% | Classes Evento e Consumidores | Engajamento dos consumidores |
+| Taxa de Eventos Pesquisados por Consumidores | Aumentar a pesquisa ativa de eventos pelos consumidores | Mede a busca ativa dos consumidores por eventos | (Número de pesquisas de eventos por consumidores / Número total de consumidores) * 100% | Classes Evento e Consumidor | Engajamento dos consumidores|
+
 Usar o seguinte modelo: 
 
 ![Indicadores de Desempenho](img/02-indic-desemp.png)
