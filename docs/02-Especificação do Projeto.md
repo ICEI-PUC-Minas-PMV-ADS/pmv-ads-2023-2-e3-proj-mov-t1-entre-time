@@ -69,9 +69,7 @@ A proposta do  aplicativo-EntreTime  é oferecer uma plataforma onde seja possí
 
 ### Processo 2 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/4d897f2d-017b-410b-aafd-8b0b97b9af27)
 
 ## Indicadores de Desempenho
 
