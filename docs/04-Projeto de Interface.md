@@ -14,10 +14,10 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 #### Para acessar a versão deste protótipo de interface com a Interação de Telas implementada e funcionando, basta acessar o link a seguir: </br></br> <a href="https://www.figma.com/proto/YgcLMeRdBzlQvWTvhpO6Nw/Protótipo-(Entre-Time)?type=design&node-id=9-26&t=m9LRIiROAHhqwA8b-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=9%3A26"><h2>Projeto de Interface Interativo Entre Time</h2></a>
 
 
-### 01 - Formulário de Login
+### 01 - Formulário de Login de Usuário
 ![Form Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/112659128/0c66ecc0-59ba-4d4f-8852-82a841bd6599)
 
-### 02 - Home Page
+### 02 - Formulário de Cadastro de Usuário
 ![Form Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/112659128/2e05470a-3ad9-47d5-8744-8365c0dc5bc8)
 
 ### 03 - Home Page
