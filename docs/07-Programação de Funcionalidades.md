@@ -5,7 +5,7 @@
 
 Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do formulário da tela 'Fale Conosco' por meio do site https://snack.expo.dev/. Falta adicionar o template padrão, tratar os dados lidos no formulário e integrar a pagina ao restante da aplicação. 
 
-Por hora foi gerafo o seguinte código:
+Por hora foi gerado o seguinte código:
 ```
 import React, { Component } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
