@@ -1,5 +1,116 @@
 # Programação de Funcionalidades
 
+## Tela 'Home'
+### Responsável: Matheus Delay
+
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas estou desenvolvendo a tela 'Home' por meio do site https://snack.expo.dev/. A barra de pesquisa ja está funcional filtrando a pesquisa pelo titulo do evento ou descrição. Resta agora desenvolver a funcionalidade de filtrar os eventos com base em sua localização.
+
+Até o momento foi gerado o seguinte código:
+```
+import React, { useState, useEffect } from 'react';
+import { Platform, View, Text, FlatList, StyleSheet, StatusBar } from 'react-native';
+import { Appbar, Avatar, Searchbar } from 'react-native-paper';
+
+const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
+
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'Primeiro Evento',
+    description: 'Av. Cândido Hartmann, S/N - Bigorrilho, Curitiba - PR, 82025-160',
+  },
+  {
+    id: 'bd7acaea-c1b4-46c2-aee5-3ad53abd28ba',
+    title: 'Segundo Evento',
+    description: 'R. Jorge Alves Hathy, 117 - Jardim da Colina, Campina Grande do Sul - PR, 83430-000',
+  },
+  {
+    id: 'bd7bdaea-c1b4-46c2-aee5-3ad53aed28ba',
+    title: 'Terceiro Evento',
+    description: 'R. Júlio César Setenareski, 150 - Col. Mergulhão, São José dos Pinhais - PR, 83085-290',
+  },
+];
+
+const Item = ({ title, description }) => (
+  <View style={styles.item}>
+    <Text style={styles.title}>{title}</Text>
+    <Text style={styles.description}>{description}</Text>
+  </View>
+);
+
+const Home = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState(DATA);
+
+  useEffect(() => {
+    const filteredEvents = DATA.filter((event) =>
+      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      event.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredData(filteredEvents);
+  }, [searchQuery]);
+
+  const onChangeSearch = (query) => {
+    setSearchQuery(query);
+  };
+
+  const renderItem = ({ item }) => (
+    <Item title={item.title} description={item.description} />
+  );
+
+  return (
+    <>
+      <Appbar.Header>
+        <Appbar.Action icon="menu" onPress={() => {}} />
+        <Avatar.Image size={38} source={require('../assets/Screenshot_2.png')} />
+        <Appbar.Content title="Menu Eventos" />
+        <Appbar.Action icon="account-box" onPress={() => {}} />
+      </Appbar.Header>
+      <Searchbar
+        placeholder="Pesquisar"
+        onChangeText={onChangeSearch}
+        value={searchQuery}
+      />
+      <View style={styles.container}>
+        <FlatList
+          data={filteredData}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
+  },
+  item: {
+    backgroundColor: '#5c1ae8',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 10,
+  },
+  title: {
+    fontSize: 32,
+    color: 'white',
+  },
+  description: {
+    fontSize: 16,
+    color: 'white',
+  },
+});
+
+export default Home;
+```
+Resultando na seguinte tela:
+
+![Imagem do WhatsApp de 2023-10-15 à(s) 08 27 55_b769926e](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/22a40f16-010c-4040-9413-a7c3cb3ab786)
+
+
 ## Tela 'Fale Conosco'
 ### Responsável: Fagner Vieira Pereira
 
