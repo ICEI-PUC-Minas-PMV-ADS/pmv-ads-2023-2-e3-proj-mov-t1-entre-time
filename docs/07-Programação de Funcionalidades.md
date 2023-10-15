@@ -304,6 +304,88 @@ Vídeo do funcionamento do Cadastro de Usuário
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/b2aeae05-a7d9-40b7-9ed1-2f5ca6dcad11
 
+## Tela 'Menu Lateral'
+### Responsável: Pedro Henrique
+
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e de algumas outras fontes externas foi gerado o primeiro esboço do que será o "Menu Lateral" que estará presente em toda a aplicação, permitindo uma navegação intuitiva e funcional entre todas as telas do nosso projeto. A estrutura está praticamente pronta, mas ainda faltam algumas melhorias na funcionalidade em si, assim como no layout para melhorar a experiência do usuário. 
+
+Por hora foi gerado o seguinte código:
+```
+import * as React from 'react';
+import { View, Text } from 'react-native';
+
+import Eventos from '../pages/Eventos';
+import Home from '../pages/Home';
+import Login from '../pages/LoginUsuario';
+import Cadastro from '../pages/CadastroUsuario';
+import AddEventos from '../pages/AddEventos';
+import Configs from '../pages/Configs';
+import Contato from '../pages/Contato';
+import Duvidas from '../pages/Duvidas';
+
+import Logo from './Avatar'
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem
+} from '@react-navigation/drawer';
+
+function Avatar(props) {
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <DrawerItem
+        label={Logo}
+      />
+    </DrawerContentScrollView>
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
+function Header() {
+  return (
+    <Drawer.Navigator
+      useLegacyImplementation
+      drawerContent={(props) => <><Avatar {...props} /></>}  
+      screenOptions={{ 
+        drawerStyle: {
+          flex: 1,
+          backgroundColor: '#c6cbef',
+          width: 240,
+        },
+      }}>
+
+      <Drawer.Screen name="Login" component={Login} />
+      <Drawer.Screen name="Cadastro" component={Cadastro} />
+      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Eventos" component={Eventos} />
+      <Drawer.Screen name="Adicionar Eventos" component={AddEventos} />
+      <Drawer.Screen name="Contato" component={Contato} />
+      <Drawer.Screen name="Dúvidas" component={Duvidas} />
+      <Drawer.Screen name="Configurações" component={Configs} />
+
+    </Drawer.Navigator>
+  );
+
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Header />
+    </NavigationContainer>
+  );
+}
+```
+Vídeo do resultado até o momento:
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/112659128/f7d19ea8-24cc-4fd5-9828-45bba2ac72b5
+
 
 ## Tela 'FAQ'
 ### Responsável: Jeferson Felix
