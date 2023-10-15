@@ -33,10 +33,10 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-- Linguagem: JavaScript / CSS
-- Bibliotecas: React Native
-- IDE: Visual Studio Code
-- Ferramentas: Microsoft Teams
+- Linguagem: JavaScript
+- Bibliotecas: React, React Native, React Native Paper, React Navigation, Date Time Picker, Axios
+- IDE: Visual Studio Code, Expo Dev
+- Ferramentas: Json Server, Json Server Auth, LocalTunnel
 
 ## Hospedagem
 
