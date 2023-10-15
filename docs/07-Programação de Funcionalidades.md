@@ -305,6 +305,104 @@ Vídeo do funcionamento do Cadastro de Usuário
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/b2aeae05-a7d9-40b7-9ed1-2f5ca6dcad11
 
 
+## Tela 'FAQ'
+### Responsável: Jeferson Felix
+
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas estou desenvolvendo a tela 'FAQ' por meio do site https://snack.expo.dev/, o backend está sendo feito por meio de uma Fake API utilizando o Json Server. Falta implementar o template padrão de design da aplicação e o dropdown que ao clicar em uma pergunta específica a resposta correspondente aparecerá.
+
+Até o momento foi gerado o seguinte código:
+
+Página do Faq:
+```
+import * as React from 'react';
+import { FlatList, StyleSheet, View, Text } from 'react-native';
+import { List } from 'react-native-paper';
+import {useIsFocused} from '@react-navigation/native';
+
+import Header from '../componentes/header';
+import Container from '../componentes/container';
+import Body from '../componentes/body';
+import {getFaq} from '../services/faq.services'
+
+const Faq = () => {
+  const isFocused = useIsFocused();
+  const [faq, setFaq] = React.useState([]);
+
+  React.useEffect(() => {
+    getFaq().then(dados => {
+      console.log(dados);
+      setFaq(dados);
+    });
+  }, [isFocused]);
+
+  const renderItem = ({ item }) => (
+    <List.Item
+      title={item.pergunta}
+      description={item.resposta}
+      style={styles.item}
+    />
+  );
+
+  return (
+    <Container>
+      <Header title={'Dúvidas frequentes'} />
+      <Body>
+        <FlatList
+        data={faq}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        />
+      </Body>
+    </Container>
+  )
+}
+
+const styles = StyleSheet.create({
+  item:{
+    borderBottomWidth: 1,
+    borderBottomColor: '#E8E8E8'
+  },
+});
+
+export default Faq;
+```
+
+Consulta no Json Server:
+```
+import axios from 'axios';
+
+const API = axios.create();
+
+export default API;
+```
+```
+export const BASE_URL = '...';
+```
+```
+import API from './webapi.services';
+import {BASE_URL} from './urls';
+
+export const getFaq = async () => {
+  try{
+    return await API.get(`${BASE_URL}/faq`).then( 
+      response => {
+        return response.data;
+      },
+      error =>{
+        console.log(error);
+        return  null;
+      }
+    );
+  }catch(error){
+    console.log(error);
+    return null;
+  }
+}
+```
+Resultado na seguinte tela:
+
+![Captura de Tela 2023-10-15 às 10 41 51](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/23e398c7-4ba2-4540-937d-57a702f43e74)
+
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
