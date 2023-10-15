@@ -79,6 +79,120 @@ Resultando na seguinte tela:
 
 <img width="555" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/103105356/98fbe3d0-056b-45ed-bcca-2136c1d2be54">
 
+## Crud Usuário
+### Responsável: Stephanye Castellano
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Falta salvar cadastrados em algum banco de dados, realizar o login e melhoria do layout.
+
+```
+import React, { useState } from 'react'
+import { View, FlatList, Text } from 'react-native'
+import {Appbar, TextInput, Button} from 'react-native-paper'
+
+const UsuarioCrud = () => {
+  const [usuarios, setUsuarios] = useState([])
+  const [id, setId] = useState('')
+  const [nome, setNome] = useState('')
+  const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
+  const [confirmarSenha, setConfirmarSenha] = useState('')
+  const [tipoUsuario, setTipoUsuario] = useState(false) 
+
+  const generateGuid = () => {
+    const S4 = () =>
+      (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
+    return `${S4()}${S4()}-${S4()}-${S4()}-${S4()}-${S4()}${S4()}${S4()}`
+  }
+
+  const adicionarUsuario = () => {
+    if (
+      nome.trim() === '' ||
+      email.trim() === '' ||
+      senha.trim() === '' ||
+      confirmarSenha.trim() === ''
+    ) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    if (senha !== confirmarSenha) {
+      alert('As senhas não coincidem.')
+      return
+    }
+
+    const novoUsuario = {
+      id: generateGuid(),
+      nome,
+      email,
+      senha,
+      tipoUsuario
+    }
+
+    setUsuarios([...usuarios, novoUsuario])
+    limparFormulario()
+  }
+
+  const limparFormulario = () => {
+    setId('')
+    setNome('')
+    setEmail('')
+    setSenha('')
+    setConfirmarSenha('')
+    setTipoUsuario(false)
+  }
+
+  return (
+    <View>
+      <Appbar.Header>
+        <Appbar.Content title="Cadastrar Novo Usuario" />
+      </Appbar.Header>
+      
+        <TextInput
+          label="Nome"
+          value={nome}
+          onChangeText={(text) => setNome(text)}
+        />
+
+        <TextInput 
+          label="Email"
+          value={email}
+          onChangeText={(text) => setEmail(text)} 
+        />
+
+        <TextInput
+          label="Senha"
+          value={senha}
+          onChangeText={(text) => setSenha(text)}
+          secureTextEntry
+        />
+
+        <TextInput
+          label="Confirmar Senha"
+          value={confirmarSenha}
+          onChangeText={(text) => setConfirmarSenha(text)}
+          secureTextEntry
+        />
+
+        <Button mode="contained" title="Adicionar Usuário" onPress={adicionarUsuario}> Criar Usuário</Button>
+
+        <FlatList
+          data={usuarios}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View>
+              <Text>{`ID: ${item.id}, Nome: ${item.nome}, Email: ${item.email}`}</Text>
+            </View>
+          )}
+        />
+      </View>
+  )
+}
+
+export default UsuarioCrud
+```
+Vídeo do funcionamento do Cadastro de Usuário 
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/b2aeae05-a7d9-40b7-9ed1-2f5ca6dcad11
+
 
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
