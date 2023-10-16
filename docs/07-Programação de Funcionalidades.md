@@ -492,6 +492,408 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
+## Crud Eventos
+### Responsável: Daniel Mendes Rufino Silva
+Revendo o microfundamento "Desenvolvimento de Aplicações Móveis", utilizando, como instruído pelo Professor Kleber Souza, o https://snack.expo.dev/ 
+está em desenvolvimento o CRUD de eventos. 
+
+Por hora foi gerado o seguinte código para inclusão de eventos:
+```
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { RadioButton, Text, TextInput, Button, Appbar } from 'react-native-paper';
+import Header from '../components/Header';
+import Container from '../components/Container';
+import Body from '../components/Body';
+import Input from '../components/Input';
+
+import { useNavigation } from '@react-navigation/native';
+
+const InsertEvento = ({ route }) => {
+  const navigation = useNavigation();
+  const { item } = route.params ? route.params : {};
+  
+  const [tipo, setTipo] = useState('esporte'); 
+  //const [criador, setCriador] = useState('');
+  const [nomeEvento, setNomeEvento] = useState(null);
+  const [nomeLocal, setNomeLocal] = useState(null);
+  const [endereco, setEndereco] = useState(null);
+  const [bairro, setBairro] = useState(null);
+  const [cidade, setCidade] = useState(null);
+  const [estado, setEstado] = useState(null);
+  const [dataInicioEvento, setDataInicioEvento] = useState(null);
+  const [horaInicioEvento, setHoraInicioEvento] = useState(null);
+  const [valorEntrada, setValorEntrada] = useState(null);
+  const [dataFimEvento, setDataFimEvento] = useState(null);
+ 
+  useEffect(()=> {
+    if(item){
+      setTipo(item.tipo == 0? 'esporte': 'show');
+      setNomeEvento(item.nomeEvento);
+      setNomeLocal(item.nomeLocal);
+      setEndereco(item.endereco);
+      setBairro(item.bairro);
+      setCidade(item.cidade);
+      setEstado(item.estado);
+      setDataInicioEvento(item.dataInicioEvento);
+      setHoraInicioEvento(item.horaInicioEvento);
+      setValorEntrada(item.valorEntrada);
+      setDataFimEvento(item.dataFimEvento);
+      
+    }
+  }, [item]);
+
+  const handleSalvar = () => {
+    console.log('Salvar');
+  };
+  const handleExcluir = () => {
+    console.log('Excluir');
+  };
+
+  return (
+    <Container>
+      <Header title={'Inserir Evento'} goBack={() => navigation.goBack()}>
+        <Appbar.Action icon="check-bold" onPress={handleSalvar} />
+        {
+          item && 
+          <Appbar.Action icon="trash-can" onPress={handleExcluir} />
+        }
+        
+      </Header>
+
+      <Body>
+        <View style={styles.containerRadio}>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'esporte' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('esporte')}
+            />
+            <Text>Esportes</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'expo' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('expo')}
+            />
+            <Text>Exposicao/Feira</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'game' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('game')}
+            />
+            <Text>Games</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'gastronomia' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('gastronomia')}
+            />
+            <Text>Gastronomia/Bebidas</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'vivo' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('vivo')}
+            />
+            <Text>Musica ao vivo</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'eletronica' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('eletronica')}
+            />
+            <Text>Musica Eletronica</Text>
+          </View>
+          <View style={styles.containerRadioItem}>
+            <RadioButton
+              value="first"
+              status={tipo === 'show' ? 'checked' : 'unchecked'}
+              onPress={() => setTipo('show')}
+            />
+            <Text>Shows</Text>
+          </View>
+        </View>
+
+        <Input
+          label="Nome evento"
+          value={nomeEvento}
+          onChangeText={(text) => setNomeEvento(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Local"
+          value={nomeLocal}
+          onChangeText={(text) => setNomeLocal(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Endereço"
+          value={endereco}
+          onChangeText={(text) => setEndereco(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Bairro"
+          value={bairro}
+          onChangeText={(text) => setBairro(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Cidade"
+          value={cidade}
+          onChangeText={(text) => setCidade(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+         <Input
+          label="Estado"
+          value={estado}
+          onChangeText={(text) => setEstado(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Data evento"
+          value={dataInicioEvento}
+          onChangeText={(text) => setDataInicioEvento(text)}
+          left={<TextInput.Icon icon="calendar-star" />}
+        />
+
+        <Input
+          label="Horário evento"
+          value={horaInicioEvento}
+          onChangeText={(text) => setHoraInicioEvento(text)}
+          left={<TextInput.Icon icon="clock-time-nine-outline" />}
+        />
+        <Input
+          label="Valor entrada"
+          value={valorEntrada}
+          onChangeText={(text) => setValorEntrada(text)}
+          left={<TextInput.Icon name="currency-brl" />}
+        />
+        <Input
+          label="Data fim evento"
+          value={dataFimEvento}
+          onChangeText={(text) => setDataFimEvento(text)}
+          left={<TextInput.Icon icon="calendar-lock" />}
+        />
+
+        <Button
+          icon="check-bold"
+          mode="contained"
+          style={styles.button}
+          onPress={handleSalvar}>
+          Salvar
+        </Button>
+
+        {item && (
+          <Button
+            icon="trash-can"
+            mode="contained"
+            color={"red"}
+            style={styles.button}
+            onPress={handleExcluir}>
+            Excluir
+          </Button>
+        )}
+      </Body>
+    </Container>
+  );
+};
+const styles = StyleSheet.create({
+  containerRadio: {
+    flexDirection: 'column',
+  },
+  containerRadioItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    margin: 5,
+  },
+});
+
+export default InsertEvento;
+
+```
+Por hora, foi gerado o seguinte código para listar eventos:
+```
+import React, { useState, useEffect } from 'react';
+import { StyleSheet } from 'react-native';
+import { List, Text, FAB, FlatList } from 'react-native-paper';
+
+import Header from '../components/Header';
+import Container from '../components/Container';
+import Body from '../components/Body';
+import { getEventos } from '../services/EventosServicesDB';
+
+import { useNavigation } from '@react-navigation/native';
+
+const ListaEventos = () => {
+  const navigation = useNavigation();
+  const [eventos, setEventos] = useState([]);
+
+  useEffect(() => {
+    getEventos().then((dados) => {
+      setEventos(dados);
+    });
+  }, []);
+  const renderItem = ({ item }) => (
+    <List.Item
+      title={item.nomeEvento + '\n' + item.nomeLocal}
+      description={
+        'Endereço: \n' +
+        item.endereco +
+        '\n' +
+        item.bairro +
+        '\n' +
+        item.cidade +
+        '\n' +
+        item.estado
+      }
+      titleNumberOfLines={8}
+      descriptionNumberOfLines={6}
+      left={(props) => (
+        <List.Icon {...props} color={'blue'} icon="human-scooter" />
+      )}
+      right={(props) => (
+        <Text {...props} style={{ alignSelf: 'center' }}>
+                             {' '}
+          {'Data do evento\n ' +
+            item.dataInicioEvento +
+            '\n Hora início\n ' +
+            item.horaInicioEvento +
+            '\n Investimento\n ' +
+            'R$' +
+            item.valorEntrada +
+            '\nData Fim evento\n ' +
+            item.dataFimEvento}{' '}
+                 {' '}
+        </Text>
+      )}
+      onPress={() => navigation.navigate('Inserir evento', { item })}
+    />
+  );
+
+  return (
+    <Container>
+            <Header title={'Lista de Eventos'} />     {' '}
+      <Body>
+             {' '}
+        <FlatList
+          data={eventos}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+                   {' '}
+        <FAB
+          style={styles.fab}
+          small
+          icon="plus"
+          onPress={() => navigation.navigate('Inserir Evento')}
+        />
+             {' '}
+      </Body>
+         {' '}
+    </Container>
+  );
+};
+
+const styles = StyleSheet.create({
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+  },
+});
+
+export default ListaEventos;
+```
+Por hora, foi gerado o seguinte código para criar o banco de dados SQLite:
+```
+import * as SQLite from 'expo-sqlite';
+
+export const Database = {
+  getConnection: () => {
+    const db = SQLite.openDatabase('evento_manager.db');
+
+    db.transaction((tx) => {
+      tx.executeSql(
+        'create table if not exists listaEventos (id integer primary key not null, tipo int not null, nomeEvento text not null, nomeLocal text not null, endereco text not null, bairro text not null, cidade text not null, estado text not null, dataIncioEvento text not null, horaIncioEvento text not null, valorEntrada real not null, dataFimEvento text not null)'
+      );
+    });
+
+    const ExecuteQuery = (sql, params = []) =>
+      new Promise((resolve, reject) => {
+        db.transaction((trans) => {
+          trans.executeSql(
+            sql,
+            params,
+            (_trans, results) => {
+              resolve(results);
+            },
+            (error) => {
+              reject(error);
+            }
+          );
+        });
+      });
+
+    return ExecuteQuery;
+  },
+};
+
+export default Database;
+```
+Por hora, foi gerado o seguinte código para criar 'insert', 'update' e 'delete' dados do banco de dados SQLite:
+```
+import Database from './DbServices';
+
+const DB_EXEC = Database.getConnection();
+
+export const getListaEventos = async () => {
+  let results = await DB_EXEC(`select * from listaEventos`);
+  return results.rows._array; 
+}
+export const insertEvento = async (param) => {
+  let results = await DB_EXEC(`insert into listaEventos(tipo, nomeEvento, nomeLocal, endereco, bairro, cidade, estado, dataIncioEvento, horaIncioEvento, valorEntrada, dataFimEvento) 
+  values(?,?,?,?,?,?,?,?,?,?,?)`, [param.tipo, param.nomeEvento, param.nomeLocal, 
+param.endereco, param.bairro, param.cidade, param.estado, param.dataIncioEvento, 
+param.horaIncioEvento, param.valorEntrada, param.dataFimEvento]);
+  //console.log(results);
+  return results.rowsAffected; 
+}
+
+export const updateEvento = async (param) => {
+  let results = await DB_EXEC(`update listaEventos set tipo=?, nomeEvento=?, nomeLocal=?, endereco=?, 
+bairro=?, cidade=?, estado=?, dataIncioEvento=?, horaIncioEvento=?, valorEntrada=?, dataFimEvento=? where id=?`, [param.tipo, param.nomeEvento, param.nomeLocal, 
+param.endereco, param.bairro, param.cidade, param.estado, param.dataIncioEvento, 
+param.horaIncioEvento, param.valorEntrada, param.dataFimEvento, param.id]);
+  return results.rowsAffected; 
+}
+
+export const deleteEvento = async (id) => {
+  let results = await DB_EXEC(`delete from listaEventos where id=?`, [id]);
+  return results.rowsAffected; 
+}
+```
+Código está em desenvolvimento e no momento está apresentando um erro.
+
+![undefined is not a function](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/9e35333c-cef0-4224-bb47-12f286cd86c3)
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
