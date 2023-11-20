@@ -192,7 +192,7 @@ Resultando na seguinte tela:
 
 ## Crud Usuário
 ### Responsável: Stephanye Castellano
-Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Falta salvar cadastrados em algum banco de dados, realizar o login e melhoria do layout.
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Utilização do Json Server para Salvar os usuarios no banco de dados. Visualmente nao teve alteração. Ajustes no plano de testes.
 
 ```
 import React, { useState } from 'react'
@@ -206,7 +206,7 @@ const UsuarioCrud = () => {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
   const [confirmarSenha, setConfirmarSenha] = useState('')
-  const [tipoUsuario, setTipoUsuario] = useState(false) 
+  const [tipoUsuario, setTipoUsuario] = useState(false)
 
   const generateGuid = () => {
     const S4 = () =>
@@ -221,7 +221,7 @@ const UsuarioCrud = () => {
       senha.trim() === '' ||
       confirmarSenha.trim() === ''
     ) {
-      alert('Por favor, preencha todos os campos.');
+      alert('Por favor, preencha todos os campos.')
       return;
     }
 
@@ -299,6 +299,7 @@ const UsuarioCrud = () => {
 }
 
 export default UsuarioCrud
+
 ```
 Vídeo do funcionamento do Cadastro de Usuário 
 
@@ -492,7 +493,7 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
-### Programação de Funcionalidades- Etapa 3
+### Programação de Funcionalidades- Etapa 4
 ### Responsável: Daniel Mendes Rufino Silva
 ## Crud Eventos com tela para inserção, edição e exclusão de eventos e outra com a listagem dos eventos que acontecerão.
 Link de acesso ao repositório do GitHub https://github.com/Dmendesr/EntreTimePucMg 
