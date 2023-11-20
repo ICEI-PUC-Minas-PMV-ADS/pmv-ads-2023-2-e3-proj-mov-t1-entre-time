@@ -192,7 +192,7 @@ Resultando na seguinte tela:
 
 ## Crud Usuário
 ### Responsável: Stephanye Castellano
-Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Utilização do Json Server para Salvar os usuarios no banco de dados. Visualmente nao teve alteração. Ajustes no plano de testes.
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Utilização do Json Server para Salvar os usuarios no banco de dados. Visualmente nao teve alteração. 
 
 ```
 import React, { useState } from 'react'
