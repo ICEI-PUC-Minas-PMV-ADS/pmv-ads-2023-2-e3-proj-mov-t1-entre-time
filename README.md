@@ -4,9 +4,10 @@ CURSO: Análise e Desenvolvimento de Sistemas
 
 DISCIPLINA: Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio
 
- SEMESTRE: Terceiro
+SEMESTRE: Terceiro
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Uma plataforma inovadora de divulgação de eventos e locais como: bares, clubs, restaurantes, dentre outros onde seja possível se divertir e se reunir com amigos. 
+O EntreTime foi criado com o objetivo de fornecer uma solução eficaz e simples para que pessoas possam encontrar diversão e entretenimento na cidade.
 
 ## Integrantes
 
