@@ -6,60 +6,150 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
-| **Caso de Teste** 	| **CT-01 – Tela Inicial e Pesquisa de Eventos** 	|
+| **Caso de Teste** 	| **CT-01 – Pesquisa de Eventos** |
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-001: A aplicação deve ter uma tela inicial onde será possível pesquisar os eventos e estabelecimentos que ofereçam algum tipo de entretenimento. |
-| Objetivo do Teste 	| Verificar se a tela inicial e a pesquisa funcionam corretamente. |
-| Testes 	| 1. Teste de Navegação: <br> - Verificar se a tela inicial é exibida corretamente ao abrir o aplicativo. <br> - Garantir que os eventos são exibidos corretamente na tela. <br> - Garantir que há uma opção de pesquisa visível na tela inicial. <br> 2. Teste de Pesquisa: <br> - Inserir diferentes consultas de pesquisa na barra de pesquisa. <br> - Verificar se os resultados são exibidos de acordo com a consulta.|
-|Critério de Êxito | - |
+| Requisito Associado | RF-01: A aplicação deve ter uma tela inicial onde será possível pesquisar os eventos e estabelecimentos que ofereçam algum tipo de entretenimento. |
+| Objetivo do Teste | Verificar se a pesquisa de eventos estão funcionando. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar o tipo de evento. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer os eventos conforme a seleção anterior. |
+| Critério de Êxito | Aparecer uma lista de eventos conforme o tema escolhido. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-02 – Páginas de Eventos Agrupados** 	|
-|	Requisito Associado 	| RF-002: A aplicação deve ter páginas com eventos similares agrupados. |
-| Objetivo do Teste 	| Verificar se os eventos são agrupados corretamente. |
-| Testes 	| 1. Teste de Exibição de Páginas: <br> - Acessar a página de eventos agrupados. <br> - Verificar se os eventos similares estão agrupados corretamente. <br> 2. Teste de Navegação entre Páginas: <br> - Verificar se é possível navegar entre as páginas de eventos agrupados. <br> - Garantir que os eventos relacionados sejam exibidos em cada página.|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-02 – Pesquisa de Estabelecimentos** |
+| Requisito Associado | RF-01: A aplicação deve ter uma tela inicial onde será possível pesquisar os eventos e estabelecimentos que ofereçam algum tipo de entretenimento. |
+| Objetivo do Teste | Verificar se a pesquisa de estabelecimentos estão funcionando. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar o tipo de estabelecimento. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer os estabalecimentos conforme a seleção anterior. |
+| Critério de Êxito | Aparecer uma lista de estabelecimentos conforme o tema escolhido. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-03 – Verificação de Agenda** 	|
-|	Requisito Associado 	| RF-003: A aplicação deve permitir verificar a agenda de um local específico. |
-| Objetivo do Teste 	| Verificação de agenda de um local específico. |
-| Testes 	| 1. Teste de Seleção de Local: <br> - Selecionar um local específico.  <br> - Verificar se a agenda do local é exibida corretamente. <br> 2. Teste de Detalhes do Evento: <br> - Selecionar um evento na agenda. <br> - Verificar se os detalhes do evento são exibidos corretamente.|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-03 – Trazer eventos similares quando realiza a pesquisa** |
+| Requisito Associado | RF-02 - A aplicação deve ter páginas com eventos similares agrupados. |
+| Objetivo do Teste | Agrupar um tipo de evento especifico conforme a pesquisa realizada. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar o tipo de eventos. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer uma lista de eventos agrupados. |
+|Critério de Êxito | Aparecer uma lista de estabelecimentos agrupadas conforme o tema escolhido. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-04 – Filtros** 	|
-|	Requisito Associado 	| RF-004: A aplicação deve dar para visualizar eventos em uma cidade distante da minha. <br> RF-005: A aplicação deve permitir o usuário filtrar a distância em quilometragem que ele esteja disposto a ir para um evento. <br> RF-011: A aplicação deve ser capaz de deixar o usuário visualizar eventos com base em sua geolocalização. <br> RF-012: A aplicação deve permitir a consulta por períodos. |
-| Objetivo do Teste 	| Verificação de filtros. |
-| Testes 	| 1. Teste de Filtros: <br> - Aplicar vários filtros de pesquisa, como data, categoria, etc. <br> - Verificar se os resultados são atualizados conforme os filtros aplicados. <br> 2. Teste de Seleção de Cidade: <br> - Escolher uma cidade distante da localização atual. <br> - Verificar se os eventos nessa cidade são exibidos corretamente. <br> 3. Teste de Filtro por Distância: <br> - Aplicar diferentes valores de distância no filtro. <br> - Verificar se os eventos são filtrados corretamente com base na distância. <br> 4. Teste de Geolocalização: <br> - Ativar a geolocalização do dispositivo. <br> - Verificar se os eventos próximos à localização atual do usuário são exibidos corretamente. <br> 5. Teste de Consulta por Data: <br> - Realizar consultas de eventos em diferentes períodos (por exemplo, hoje, esta semana, este mês). <br> - Verificar se os eventos são filtrados de acordo com o período selecionado. |
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-04 – Buscar eventos de um local específico** |
+| Requisito Associado | RF-03 - A aplicação deve permitir verificar a agenda de um local específico. |
+| Objetivo do Teste | Visualizar agenda de um local especifíco. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar o local. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer uma lista eventos naquele lugar. |
+| Critério de Êxito | Aparecer eventos de um único local. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-05 – Visualização de Barzinhos Populares** 	|
-|	Requisito Associado 	| RF-006: A aplicação deve visualizar os barzinhos mais populares da cidade. |
-| Objetivo do Teste 	| Verificação de barzinhos populares. |
-| Testes 	| 1. Teste de Visualização: <br> - Acessar a seção de barzinhos populares. <br> - Verificar se os barzinhos populares são listados corretamente. |
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-05 – Pesquisar eventos de outra cidade** |
+| Requisito Associado | RF-04 – A aplicação deve dar para visualizar eventos em uma cidade distante da minha. |
+| Objetivo do Teste | Visualizar agenda de outra cidade. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar a cidade desejada. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer uma lista eventos daquela cidade |
+| Critério de Êxito | Aparecer eventos da cidade selecionada. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-06 – Avaliação de Locais e Eventos** 	|
-|	Requisito Associado 	| RF-007: A aplicação deve permitir que o usuário avalie os locais e eventos que ele frequentou recentemente. |
-| Objetivo do Teste 	| Verificação de avaliações. |
-| Testes 	| 1. Teste de Avaliação: <br> - Frequente um local ou evento. <br> - Avaliar o local/evento. <br> - Verificar se a avaliação é registrada corretamente.|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-06 – Pesquisar eventos pela quilometragem** |
+| Requisito Associado | RF-05 - A aplicação deve permitir o usuário filtrar a distância em quilometragem que ele esteja disposto a ir para um evento. |
+| Objetivo do Teste | Visualizar eventos dentro de uma quilometragem. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar a quilometragem desejada. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer uma lista eventos dentro daquela quilometragem |
+| Critério de Êxito | Aparecer eventos dentro de uma quilometragem selecionada. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-07 – Autogerenciamento de Usuários** 	|
-|	Requisito Associado 	| RF-008: A aplicação deve possibilitar o autogerenciamento de usuários. |
-| Objetivo do Teste 	| Verificação de usuários. |
-| Testes 	| 1. Teste de Registro: <br> - Criar uma nova conta de usuário. <br> - Verificar se a conta é criada com sucesso. <br> 2. Teste de Atualização de Perfil: <br> - Atualizar informações do perfil do usuário. <br> - Verificar se as informações são atualizadas corretamente.|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-07 – Pesquisar por barzinhos mais populares da cidade** |
+| Requisito Associado | RF-06 - A aplicação deve visualizar os barzinhos mais populares da cidade. |
+| Objetivo do Teste | Poder visualizar os barzinhos mais populares da cidade. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - A aplicação mostrará primeiros os barzinhos mais visitados |
+| Critério de Êxito | Aparecer os barzinhos com mais acessos. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-08 – Suporte/Dúvidas** 	|
-|	Requisito Associado 	| RF-009: A aplicação deve ter uma sessão de Suporte/Dúvidas. |
-| Objetivo do Teste 	| Verificação sessão de suporte/dúvidas. |
-| Testes 	| 1. Teste de Acesso ao Suporte: <br> - Acessar a sessão de suporte/dúvidas. <br> - Verificar se há informações úteis disponíveis.|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-08 – Avaliar evento** |
+| Requisito Associado | RF-07 - A aplicação deve permitir que o usuário avalie os locais e eventos que ele frequentou recentemente. |
+| Objetivo do Teste | Poder mostrar a satisfação dos usuários em relação a um determinado evento. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar um evento  <br> - Terá uma opção para avaliação <br> - Então o usuário contrinuirá com a sua nota para aquele evento. |
+| Critério de Êxito | Avaliação de evento realizada com sucesso. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-09 – Informações do Evento do Planejador** 	|
-|	Requisito Associado 	| RF-010: A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. |
-| Objetivo do Teste 	| Verificação sessão de agendamento de eventos. |
-| Testes 	| 1. Teste de Preenchimento de Campos Obrigatórios: <br> - Criar um evento como planejador. <br> - Verificar se todos os campos obrigatórios são apresentados e podem ser preenchidos. <br> - Verificar se o evento está sendo armazenado corretamente|
-|Critério de Êxito | - |
+| **Caso de Teste** 	| **CT-09 – Avaliar local** |
+| Requisito Associado | RF-07 - A aplicação deve permitir que o usuário avalie os locais e eventos que ele frequentou recentemente. |
+| Objetivo do Teste | Poder mostrar a satisfação dos usuários em relação a um determinado local. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar um local  <br> - Terá uma opção para avaliação <br> - Então o usuário contrinuirá com a sua nota para aquele local. |
+| Critério de Êxito | Avaliação do local realizada com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-10 – Cadastro de usuário** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Poder cadastrar um usuário apra ter acesso a mais funcionalidades do sistema. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Clicar na opção "Adicionar usuário <br> - Preencher todos os campos corretamente. <br> - Clicar em "Criar usuário". <br> - Usuário será cadastrado com sucesso e aparecerá os dados da tela principal do sistema |
+| Critério de Êxito | Cadastro do usuário realizado com sucesso e redirecionamento para a tela principal do sistema. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-11 – Tentar criar usuário com campos vazios** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Impedir que um usuário faça cadastro com dados faltantes |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Clicar na opção "Adicionar usuário <br> - Deixar de preencher 1 ou vários campos. <br> - Clicar em "Criar usuário". <br> - Usuário deverá receber um alerta informando que falta campos a serem preenchidos. |
+| Critério de Êxito | Falha ao tentar cadastrar usuário por falta de dados. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-12 – Tentar criar usuário com campos senha e Confirmar senha diferentes** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Impedir que um usuário faça cadastro com senha e confirmar senha diferentes |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Clicar na opção "Adicionar usuário <br> - Inserir senha ABCDEF e inserir em Confirmar senha 123456. <br> - Clicar em "Criar usuário". <br> - Usuário deverá receber um alerta informando as senhas não coincidem. |
+| Critério de Êxito | Falha ao tentar cadastrar usuário senhas não coincidirem. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-13 – Editar usuário** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Editar um usuário com sucesso |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Realize o login <br> - Clicar em "Editar Usuário". <br> - Modificar os campos necessarios. <br> - Clicar em "Salvar Alterações". <br> - Então as alterçãoes serão feitas com sucesso. |
+| Critério de Êxito | Alterar informações do usuário com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-14 – Deletar usuário** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Deletar um usuário com sucesso |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Realize o login <br> - Clicar em "Deletar Usuário". <br> - Clicar em "Confirmar deleção". <br> - Então o usuário será deletado com sucesso. |
+| Critério de Êxito | Usuário não existir mais no banco de dados e nem conseguir logar mais no sistema |
+|  	|  	|
+| **Caso de Teste** 	| **CT-15 – Realizar login** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Realizar login com sucesso |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Digitar email e senha corretamente. <br> - Então acessará a tela principal do sistema |
+| Critério de Êxito | Usuário conseguiu realizar o login com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-16 – Realizar login com email inválido** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Falhar o login com email não existente no banco de dados |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Digitar email errado ou vazio e senha corretamente. <br> - Então o sistema deverá emitir um alerta com o email inválido |
+| Critério de Êxito | Usuário falhou ao realizar o login devido o email inválido |
+|  	|  	|
+| **Caso de Teste** 	| **CT-17 – Realizar login com senha inválida** |
+| Requisito Associado | RF-08 - A aplicação deve possibilitar o autogerenciamento de usuários. |
+| Objetivo do Teste | Falhar o login com senha não existente no banco de dados |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de usuário  <br> - Digitar email correto e senha inválida. <br> - Então o sistema deverá emitir um alerta com o senha inválida |
+| Critério de Êxito | Usuário falhou ao realizar o login devido a senha inválida |
+|  	|  	|
+| **Caso de Teste** 	| **CT-18 – Acessar Tela de Suporte/Dúvidas** |
+| Requisito Associado | RF-09 - A aplicação deve ter uma sessão de Suporte/Dúvidas. |
+| Objetivo do Teste | Acessar a tela de Suporte/Dúvidas para o melhor entendimento do sistema |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Selecionar o icone de "Suporte/Dúvidas"  <br> - Sistema deve direcionar o usuário para a página Suporte/Dúvida |
+| Critério de Êxito | Usuário visualizar a tela de Suporte/Dúvidas |
+|  	|  	|
+| **Caso de Teste** 	| **CT-19 – Cadastro de eventos** |
+| Requisito Associado | RF-10 - A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. |
+| Objetivo do Teste | Cadastrar um evento com sucesso. |
+| Testes | - Acessar a aplicação com um usuário do tipo Empreendendor. <br> - Clicar em "+" para adicionar um evento  <br> - Preencher os campos corretamente. <br> - Clicar em "Salvar Evento". <br> - Então o sistema salvará o evento e ficará visivel para todos os usuários |
+| Critério de Êxito | Usuário do tipo Empreendedor finalizar o cadastro de Evento com sucesso. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-20 – Editar um evento** |
+| Requisito Associado | RF-10 - A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. |
+| Objetivo do Teste | Editar um evento com sucesso. |
+| Testes | - Acessar a aplicação com um usuário do tipo Empreendendor. <br> - Clicar em "Editar Evento". <br> - Preencher os campos corretamente. <br> - Clicar em "Atualizar Evento". <br> - Então o sistema salvará o evento com as modificações e ficará visivel para todos os usuários |
+| Critério de Êxito | Usuário do tipo Empreendedor conseguiu editar um Evento com sucesso. 
+|  	|  	|
+| **Caso de Teste** 	| **CT-21 – Excluir um evento** |
+| Requisito Associado | RF-10 - A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. |
+| Objetivo do Teste | Excluir um evento com sucesso. |
+| Testes | - Acessar a aplicação com um usuário do tipo Empreendendor. <br> - Clicar em "Excluir Evento".  <br> - Então o sistema excluirá o evento e não aparecerá mais para os usuários. |
+| Critério de Êxito | Usuário do tipo Empreendedor conseguiu excluir um evento com sucesso e não aparecerá mais para os usuários. 
+|  	|  	|
+| **Caso de Teste** 	| **CT-22 – Tentar cadastrar evento faltando informação** |
+| Requisito Associado | RF-10 - A aplicação deve oferecer para o planejador do evento campos obrigatórios sobre informações do evento, como nome, local, horário de início e fim, tipo de ambiente, estilo de evento, programação e regras do espaço onde o evento será realizado. |
+| Testes | - Acessar a aplicação com um usuário do tipo Empreendendor. <br> - Clicar em "+" para adicionar um evento  <br> - Preencher os campos deixando um ou mais campos vazios. <br> - Clicar em "Salvar Evento". <br> - Então o sistema deverá emitir um alerta informando que todos os cmapos deverão ser preenchidos. |
+| Critério de Êxito | Usuário falhou ao adicionar o evento devido a falta de informação. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-23 – Eventos conforme a geolocalização** |
+| Requisito Associado | RF-11 - A aplicação deve ser capaz de deixar o usuário visualizar eventos com base em sua geolocalização. |
+| Objetivo do Teste | Visualizar eventos conforme a geolocalização do usuário |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Automaticamente o aplicado deverá mostrar eventos conforme a geolocalização do usuário. 
+| Critério de Êxito | Usuário deverá permitir o compartilhamento de localização Sempre ou Apenas enquanto utilizar o aplicativo. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-24 – Consulta por datas** |
+| Requisito Associado | RF-12 - A aplicação deve permitir a consulta por períodos. |
+| Objetivo do Teste | Realizar uma pesquisa conforme a data selecionada no filtro. |
+| Testes | - Acessar a aplicação na tela inicial. <br> - Em filtro selecionar uma data específica. <br> - CLicar em "Pesquisar". <br> - Então deverá aparecer uma lista eventos dentro da data selecionada. |
+| Critério de Êxito | Aparecer uma lista de eventos com a data selecionada. |
+
 
 ## Ferramentas de Testes (Opcional)
 
@@ -68,7 +158,7 @@ Comente sobre as ferramentas de testes utilizadas.
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
 > - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+> - [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
 > - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
 > - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
