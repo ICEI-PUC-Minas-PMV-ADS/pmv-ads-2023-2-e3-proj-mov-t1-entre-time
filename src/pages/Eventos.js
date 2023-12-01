@@ -1,67 +1,59 @@
 import React, { useEffect, useState } from 'react';
-
-import { FlatList, StyleSheet, ActivityIndicator } from 'react-native';
-import { List, Text, FAB as Fab } from 'react-native-paper';
-
-import Header from '../components/Header';
-import Container from '../components/Container';
-import Body from '../components/Body';
-
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { Appbar, List, Searchbar, FAB as Fab } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { getEventos } from '../services/Eventos.Services';
 
 const Eventos = () => {
-
   const navigation = useNavigation();
   const [eventos, setEventos] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredEventos, setFilteredEventos] = useState([]);
 
   useEffect(() => {
-    const fetchEventos = async () => {
-      try {
-        setLoading(true);
-        const dados = await getEventos();
-        setEventos(dados);
-      } catch (error) {
-        console.error('Error fetching events:', error);
-        setError('Error fetching events');
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchEventos();
+    getEventos().then(dados => {
+      setEventos(dados);
+      setFilteredEventos(dados);
+    });
   }, []);
-  
-    const fetchData = async () => {
-      try {
-        await fetchEventos();
-      } catch (error) {
-        console.error('Unhandled promise rejection:', error);
-      }
-    };
-  
-    fetchData();
+
+  const handleSearch = query => {
+  setSearchQuery(query);
+  const filteredData = eventos.filter(
+    evento =>
+      (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase()))
+  );
+  setFilteredEventos(filteredData);
+};
 
   const renderItem = ({ item }) => (
-    <List.Item
-      title={item.nomeEvento + ' \n ' + item.nomeLocal}
-      description={
-        item.endereco +
-        '\n' +
-        'Bairro: ' +
-        item.bairro +
-        ' ' +
-        '\n' +
-        'Cidade: ' +
-        item.cidade +
-        '\n'
-      }
+    <List.Item style={styles.item}
+      
+
       titleNumberOfLines={2}
       descriptionNumberOfLines={6}
-      left={(props) => <List.Icon {...props} icon="alien" />}
+      left={(props) => (
+        <Text {...props} style={styles.title} >
+          {'\n' +
+            item.nomeEvento +
+            '\n' +
+            'Local: ' +
+            item.nomeLocal +
+            '\n' +
+            'Endereço: ' +
+             item.endereco +
+        ' - ' +
+        item.bairro +
+        ', ' +
+        item.cidade +
+        ' - ' +
+        item.estado +
+        '\n'}
+        </Text>
+      )}
       right={(props) => (
-        <Text {...props}>
+        <Text {...props} style={styles.description} >
           {'\n' +
             'Data: ' +
             item.dataInicioEvento +
@@ -77,47 +69,60 @@ const Eventos = () => {
     />
   );
 
-  if (loading) {
-    return (
-      <Container>
-        <Header title={'Eventos'}></Header>
-        <Body>
-          <ActivityIndicator size="large" color="#0000ff" />
-        </Body>
-      </Container>
-    );
-  }
+  return (
+    <View style={{ flex: 1 }}>
+      <Appbar.Header>
+        <Appbar.Action icon="menu" onPress={() => {}} />
+        <Appbar.Content title="Menu Eventos" />
+        <Appbar.Action icon="account-box" onPress={() => {}} />
+      </Appbar.Header>
 
-  if (error) {
-    return (
-      <Container>
-        <Header title={'Eventos'}></Header>
-
-      <Body>
-        <FlatList
-          data={Eventos}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-
+      <View style={{ paddingHorizontal: 10 }}>
+        <Searchbar
+          placeholder="Pesquise pelo evento"
+          onChangeText={handleSearch}
+          value={searchQuery}
         />
-        <Fab
-          style={styles.Fab}
-          small
-          icon="plus"
-          onPress={() => useNavigation.navigate('Adicionar Eventos')}
-        />
-      </Body>
-    </Container>
-    );
-  };
-}
+      </View>
+
+      <FlatList
+        data={filteredEventos}
+        renderItem={renderItem}
+        keyExtractor={item => item.id.toString()}
+      />
+
+      <Fab
+        style={styles.Fab}
+        small
+        icon="plus"
+        onPress={() => navigation.navigate('Adicionar Eventos')}
+      />
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   Fab: {
     position: 'absolute',
     margin: 16,
     right: 0,
     bottom: 0,
-  }
+  },
+  item: {
+    backgroundColor: '#5c1ae8',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 12,
+    borderRadius: 16,
+  },
+  title: {
+    fontSize: 14,
+    color: 'white',
+  },
+  description: {
+    fontSize: 12,
+    color: 'white',
+  },
 });
 
 export default Eventos;
