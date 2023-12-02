@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 
 // import Main from '../navigations/Main';
-import UserProvider from './contexts/UserContext'
+import UserProvider from './src/contexts/UserContext'
 
-import Route from './navigations/Route';
+import Route from './src/navigations/Route';
 
 const App = () => {
 
