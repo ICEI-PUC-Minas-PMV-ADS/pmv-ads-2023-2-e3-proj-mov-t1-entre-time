@@ -5,8 +5,8 @@ import { useNavigation } from '@react-navigation/native'
 
 import Container from '../components/Container'
 import Body from '../components/Body'
+import Input from '../components/Input'
 import { useUser } from '../contexts/UserContext'
-import {login} from '../services/auth.services';
 
 const Login = () => {   
     const navigation = useNavigation()
@@ -14,25 +14,6 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
-
-    const handleLogin= () => {
-
-      login({
-        email: email,
-        password: password
-      }).then( res => {
-        console.log(res);
-  
-        if(res && res.user){
-          setSigned(true);
-          setName(res.user.name);
-          AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
-        }else{
-           Alert.alert('Atenção', 'Usuário ou senha inválidos!');
-        }
-  
-      });      
-    }
 
     return (
         <Container>
