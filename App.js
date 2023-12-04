@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 
-// import Main from '../navigations/Main';
+//import Main from './src/navigations/Main';
 import UserProvider from './src/contexts/UserContext'
 
 import Route from './src/navigations/Route';

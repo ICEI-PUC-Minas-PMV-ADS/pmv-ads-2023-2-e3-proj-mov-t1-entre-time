@@ -1,13 +1,6 @@
 {
-  "name": "pmv-ads-2023-2-e3-proj-mov-t1-entre-time",
-  "version": "1.0.0",
-  "description": "CURSO: Análise e Desenvolvimento de Sistemas",
-  "main": "App.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -61,4 +54,3 @@
   },
   "private": true
 }
-
