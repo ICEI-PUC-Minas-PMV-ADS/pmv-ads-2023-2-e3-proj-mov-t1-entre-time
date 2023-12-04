@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, FlatList, Text, StyleSheet } from 'react-native';
+import { View, FlatList, Text, StyleSheet, Alert } from 'react-native';
 import { Appbar, TextInput, Button, RadioButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
@@ -20,7 +20,7 @@ const Register = () => {
     register({
       nome: nome,
       email: email,
-      senha: senha,
+      password: senha,
       confirmarSenha: confirmarSenha,
       tipoUsuario: tipoUsuario,
     }).then(res => {
