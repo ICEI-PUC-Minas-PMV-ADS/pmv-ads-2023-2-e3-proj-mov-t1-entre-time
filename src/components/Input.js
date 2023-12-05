@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { TextInput } from 'react-native-paper'
 
 const Input = (props) => {
   return (
@@ -9,14 +9,14 @@ const Input = (props) => {
         keyboardType='decimal-pad'
         {...props}      
       />)
-    ;
-};
+    
+}
 
 const styles = StyleSheet.create({
   input: {
     backgroundColor: '#FFF',
     marginBottom: 8,
   },
-});
+})
 
-export default Input;
+export default Input

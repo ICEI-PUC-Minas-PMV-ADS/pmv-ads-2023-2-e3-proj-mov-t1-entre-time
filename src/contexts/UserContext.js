@@ -14,7 +14,7 @@ export default function UserProvider({ children }) {
         signed,
         setSigned,
         name,
-        setName,
+        setName
       }}
     >
       {children}

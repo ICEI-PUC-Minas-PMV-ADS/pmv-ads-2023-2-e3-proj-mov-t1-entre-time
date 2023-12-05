@@ -5,8 +5,8 @@ import { useNavigation } from '@react-navigation/native'
 
 import Container from '../components/Container'
 import Body from '../components/Body'
+import Input from '../components/Input'
 import { useUser } from '../contexts/UserContext'
-import {login} from '../services/auth.services';
 
 const Login = () => {   
     const navigation = useNavigation()
@@ -54,7 +54,7 @@ const Login = () => {
                   left={<TextInput.Icon name="key" />}
                   secureTextEntry
               />
-              <Button mode="contained" onPress={() => setSigned(true)}>
+              <Button mode="contained" onPress={() => handleLogin()}>
                   LOGIN
               </Button>
               <Button mode="outline" onPress={() => navigation.navigate('Register')}>
