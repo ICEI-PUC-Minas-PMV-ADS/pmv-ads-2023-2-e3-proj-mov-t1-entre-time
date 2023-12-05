@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { Appbar, List, Searchbar, FAB as Fab } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { getEventos } from '../services/Eventos.Services';
 
 const Eventos = () => {
@@ -9,20 +9,26 @@ const Eventos = () => {
   const [eventos, setEventos] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredEventos, setFilteredEventos] = useState([]);
+  const isFocused = useIsFocused();
 
   useEffect(() => {
     getEventos().then(dados => {
-      setEventos(dados);
+      console.log(dados);
       setFilteredEventos(dados);
     });
-  }, []);
+  }, [isFocused]);
 
   const handleSearch = query => {
   setSearchQuery(query);
   const filteredData = eventos.filter(
     evento =>
+      // (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
+      // (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase()))
       (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
-      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase()))
+      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.cidade && evento.cidade.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.dataInicioEvento && evento.dataInicioEvento.toLowerCase().includes(query.toLowerCase()))
+
   );
   setFilteredEventos(filteredData);
 };

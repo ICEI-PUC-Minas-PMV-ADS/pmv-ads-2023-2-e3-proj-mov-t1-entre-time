@@ -54,7 +54,7 @@ const Login = () => {
                   left={<TextInput.Icon name="key" />}
                   secureTextEntry
               />
-              <Button mode="contained" onPress={() => handleLogin()}>
+              <Button mode="contained" onPress={() => setSigned(true)}>
                   LOGIN
               </Button>
               <Button mode="outline" onPress={() => navigation.navigate('Register')}>
@@ -67,7 +67,8 @@ const Login = () => {
 
 const styles = StyleSheet.create({
   textHeader:{
-    textAlign:'center'
+    textAlign:'center',
+    marginTop: 200
   }
 })
 
