@@ -525,36 +525,21 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
-### Programação de Funcionalidades- Etapa 4
 ### Responsável: Daniel Mendes Rufino Silva
-## Crud Eventos com tela para inserção, edição e exclusão de eventos e outra com a listagem dos eventos que acontecerão.
-Link de acesso ao repositório do GitHub https://github.com/Dmendesr/EntreTimePucMg 
-Para testar o código será necessário baixar o código na máquina e rodar no VSC(Visual Studio Code) com o npm start. Após dar o 'start', App deverá ser aberto no Expo Go, que deverá ser baixado no celular e código QR lido. Ou pelo Android Studio. Mas antes disso, será necessário seguir os passos abaixo.
-Para que a API fake funcione, quem estiver testando deverá dar o comando >json-server --watch db.json
-Em seguida >lt --port 3000   , para ter um url localtunnel.
-Quando tiver o url disponibilizado, após o comando >lt --port 3000  , clicar no link para verificar se ele funciona. 
-Quando página for aberta buscar por 1. If you're running localtunnel on a local computer, go to this link in your browser: https://ipv4.icanhazip.com e clicar nesse link  https://ipv4.icanhazip.com que dará o IP público. Colocar esse número de IP no Endpoint IP: para rodar o json Server.
-Agora é hora de testar pelo Expo Go ou Android Studio.
+### Programação de Funcionalidades- Etapa 5
+## Crud Eventos com tela para inserção, edição e exclusão de eventos.
+Foi criado, no Vercel, o site, para persistência dos dados.
+https://entre-time-json.vercel.app 
 
->Print do código db.json, onde os eventos foram incluídos -
-![Inclusão pelo db json no VSC](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/1169c4e0-6d14-4b99-9611-d283ec568395)
+>Print da tela do App, mostrando a opção de salvar um evento.
+![Adicionar eventos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/a709d4b3-e71f-4d8c-a8aa-2a7d5deb0833)
 
->Print da tela do App, mostrando os eventos que foram incluídos no jb.json -
->
-![Tela App eventos incluídos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/cf43ce4a-bed8-41ec-b8fb-823550a82f74)
 
-Com o link disponibilizado pelo localtunnel 'https://nine-wombats-cheat.loca.lt/eventos' é possível verificar os eventos no navegador
->
-![crud no navegador](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/1c4f016d-ffb9-404f-9866-dd6879499956)
+>Print da tela do App, mostrando a opção de editar, podendo salvar o evento editado ou excluir evento.
+>![Adicionando evento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/4a053ac7-54f4-49cf-9ee7-7e6ad506c35b)
 
-Excluindo Evento, Expo Go
-![Excluindo evento pelo Expo Go](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/4ceb9329-b45b-4cbe-91ec-a056118f9a54)
 
-![Excluindo evento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/31a896fd-d956-42e1-9deb-84302019ac03)
 
-Exclusão com Commit no json Server
-
-[db.json - EntreTimePucMg - Visual Studio Code 2023-11-19 18-30-47.zip](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/files/13404683/db.json.-.EntreTimePucMg.-.Visual.Studio.Code.2023-11-19.18-30-47.zip)
 
 
 > **Links Úteis**:
