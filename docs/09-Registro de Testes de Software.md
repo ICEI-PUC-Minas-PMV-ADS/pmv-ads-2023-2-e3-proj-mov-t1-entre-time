@@ -45,43 +45,33 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/9f71673a-1ec2-4f82-b0e9-cc12a2fb4b35)
 
 
-### CT-06 – Pesquisar eventos pela quilometragem.
+### CT-06 – Cadastro de usuário.
 
-### CT-07 – Pesquisar por barzinhos mais populares da cidade.
+### CT-07 – Tentar criar usuário com campos vazios.
 
-### CT-08 – Avaliar evento.
+### CT-08 – Tentar criar usuário com campos senha e Confirmar senha diferentes.
 
-### CT-09 – Avaliar local.
+### CT-09 – Editar usuário.
 
-### CT-10 – Cadastro de usuário.
+### CT-10 – Deletar usuário.
 
-### CT-11 – Tentar criar usuário com campos vazios.
+### CT-11 – Realizar login.
 
-### CT-12 – Tentar criar usuário com campos senha e Confirmar senha diferentes.
+### CT-12 – Realizar login com email inválido.
 
-### CT-13 – Editar usuário.
+### CT-13 – Realizar login com senha inválida.
 
-### CT-14 – Deletar usuário.
+### CT-14 – Acessar Tela de Suporte/Dúvidas.
 
-### CT-15 – Realizar login.
+### CT-15 – Cadastro de eventos.
 
-### CT-16 – Realizar login com email inválido.
+### CT-16 – Editar um evento.
 
-### CT-17 – Realizar login com senha inválida.
+### CT-17 – Excluir um evento.
 
-### CT-18 – Acessar Tela de Suporte/Dúvidas.
+### CT-18 – Tentar cadastrar evento faltando informação.
 
-### CT-19 – Cadastro de eventos.
-
-### CT-20 – Editar um evento.
-
-### CT-21 – Excluir um evento.
-
-### CT-22 – Tentar cadastrar evento faltando informação.
-
-### CT-23 – Eventos conforme a geolocalização.
-
-### CT-24 – Consulta por datas.
+### CT-19 – Consulta por datas.
 
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
