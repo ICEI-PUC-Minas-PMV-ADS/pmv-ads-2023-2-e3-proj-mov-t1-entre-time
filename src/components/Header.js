@@ -7,7 +7,9 @@ const Header = ({ title, goBack, children }) => {
     <Appbar.Header>
       {
         goBack &&
-      <Appbar.Content title={title} />}
+        <Appbar.BackAction onPress={goBack} />
+      }
+      <Appbar.Content title={title} />
       {children && <>{children}</>}
     </Appbar.Header>
   );
