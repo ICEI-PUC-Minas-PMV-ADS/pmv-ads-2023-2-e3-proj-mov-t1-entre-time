@@ -23,7 +23,9 @@ const Eventos = () => {
   const filteredData = eventos.filter(
     evento =>
       (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
-      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase()))
+      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.cidade && evento.cidade.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.dataInicioEvento && evento.dataInicioEvento.toLowerCase().includes(query.toLowerCase()))
   );
   setFilteredEventos(filteredData);
 };
