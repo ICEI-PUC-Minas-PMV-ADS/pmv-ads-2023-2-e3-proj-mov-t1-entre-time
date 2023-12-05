@@ -4,7 +4,7 @@
 
 Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do projeto contemplando todos os itens trabalhados nos demais artefatos.
 
-## Título do Projeto
+## EntreTime
 
 Nome e marca do projeto
 
@@ -18,7 +18,7 @@ O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do conte
 > - [Especialista do TED dá 10 dicas para criar slides eficazes e bonitos](https://soap.com.br/blog/especialista-do-ted-da-10-dicas-para-criar-slides-eficazes-e-bonitos)
 
 ## Conjunto de Slides (Estrutura)
-
+https://docs.google.com/presentation/d/18VSB7-w8TW-bH15T4pJvxYRFlXi30NJTVzYEdyAFtHw/edit?usp=sharing
 O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro do tempo determinado. Importante ressaltar a importância da descrição clara de todo o andamento do projeto, insumos gerados e requisitos atendidos.
  
 > **Links Úteis**:
