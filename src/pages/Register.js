@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, FlatList, Text, StyleSheet } from 'react-native';
+import { View, FlatList, Text, StyleSheet, Alert } from 'react-native';
 import { Appbar, TextInput, Button, RadioButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
@@ -20,14 +20,14 @@ const Register = () => {
     register({
       nome: nome,
       email: email,
-      senha: senha,
+      password: senha,
       confirmarSenha: confirmarSenha,
       tipoUsuario: tipoUsuario,
     }).then(res => {
         console.log(res)
 
         if(res){
-          Alert.alert('Usuário cadastrado com sucesso!', [{text:"OK", onPress: () => navigation.goBack()}])
+          Alert.alert('Atenção','Usuário cadastrado com sucesso!', [{text:"OK", onPress: () => navigation.goBack()}])
         } else {
           Alert.alert('Atenção', 'Usuário não cadastrado! Tente novamente mais tarde =D')
         }

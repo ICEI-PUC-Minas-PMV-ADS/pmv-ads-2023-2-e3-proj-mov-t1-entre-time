@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Alert } from 'react-native'
 import { TextInput, Button, Headline } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native'
 
@@ -28,7 +28,8 @@ const Login = () => {
           setName(res.user.name);
           AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
         }else{
-           Alert.alert('Atenção', 'Usuário ou senha inválidos!');
+           Alert.alert('Atenção', 'Usuário ou senha inválidos!', [{ text: 'OK' }]);
+
         }
   
       });      
