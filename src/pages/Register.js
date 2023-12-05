@@ -27,7 +27,7 @@ const Register = () => {
         console.log(res)
 
         if(res){
-          Alert.alert('Usuário cadastrado com sucesso!', [{text:"OK", onPress: () => navigation.goBack()}])
+          Alert.alert('Atenção','Usuário cadastrado com sucesso!', [{text:"OK", onPress: () => navigation.goBack()}])
         } else {
           Alert.alert('Atenção', 'Usuário não cadastrado! Tente novamente mais tarde =D')
         }

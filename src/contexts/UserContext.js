@@ -1,10 +1,12 @@
-import * as React from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
-export const UserContext = React.createContext();
+import PropTypes from 'prop-types';
 
-export default function UserProvider({children}){
-  const [signed, setSigned] = React.useState(false);
-  const [name, setName] = React.useState('');
+export const UserContext = createContext();
+
+export default function UserProvider({ children }) {
+  const [signed, setSigned] = useState(false);
+  const [name, setName] = useState(false);
 
   return (
     <UserContext.Provider
@@ -20,8 +22,17 @@ export default function UserProvider({children}){
   );
 }
 
-export function useUser(){
-  const context = React.useContext(UserContext);
-  const {signed, setSigned, name, setName} = context
-  return {signed, setSigned, name, setName}
+UserProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export function useUser() {
+  const context = useContext(UserContext);
+
+  if (!context) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+
+  const { signed, setSigned, name, setName } = context;
+  return { signed, setSigned, name, setName };
 }

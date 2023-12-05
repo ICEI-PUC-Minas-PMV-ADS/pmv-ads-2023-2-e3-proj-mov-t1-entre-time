@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://social-crabs-search.loca.lt'
+export const BASE_URL = 'https://entre-time-json.vercel.app'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { Appbar, List, Searchbar, FAB as Fab, BottomNavigation } from 'react-native-paper';
+import { Appbar, List, Searchbar, FAB as Fab } from 'react-native-paper';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { getEventos } from '../services/Eventos.Services';
 
@@ -16,12 +16,14 @@ const Eventos = () => {
       console.log(dados);
       setFilteredEventos(dados);
     });
-  }, [isFocused]);
+  }, [isFocused]);
 
   const handleSearch = query => {
   setSearchQuery(query);
   const filteredData = eventos.filter(
     evento =>
+      // (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
+      // (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase()))
       (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
       (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase())) ||
       (evento.cidade && evento.cidade.toLowerCase().includes(query.toLowerCase())) ||
@@ -75,11 +77,12 @@ const Eventos = () => {
   return (
     <View style={{ flex: 1 }}>
       <Appbar.Header>
+        <Appbar.Action icon="menu" onPress={() => {}} />
         <Appbar.Content title="Menu Eventos" />
         <Appbar.Action icon="account-box" onPress={() => {}} />
       </Appbar.Header>
 
-      <View style={styles.search}>
+      <View style={{ paddingHorizontal: 10 }}>
         <Searchbar
           placeholder="Pesquise pelo evento"
           onChangeText={handleSearch}
@@ -125,10 +128,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'white',
   },
-  search: {
-    paddingTop: 10,
-    paddingHorizontal: 10
-  }
 });
 
 export default Eventos;

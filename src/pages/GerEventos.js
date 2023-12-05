@@ -108,7 +108,7 @@ const GerEventos = ({ route }) => {
 
         navigation.goBack();
       } else {
-        const newEvent = await insertEvento({
+        /*const newEvent =*/ await insertEvento({
           tipo: tipo === 'esporte' ? 0 : 1,
           nomeEvento: nomeEvento,
           nomeLocal: nomeLocal,
@@ -122,9 +122,9 @@ const GerEventos = ({ route }) => {
           dataFimEvento: dataFimEvento,
         });
 
-        if (newEvent) {
-          insertEvento(prevEvents => [...prevEvents, newEvent]);
-        }
+        // if (newEvent) {
+        //   insertEvento(prevEvents => [...prevEvents, newEvent]);
+        // }
 
         navigation.goBack();
       }

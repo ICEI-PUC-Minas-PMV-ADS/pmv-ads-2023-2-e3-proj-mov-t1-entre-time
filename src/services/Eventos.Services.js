@@ -65,6 +65,6 @@ export const deleteEvento = async (id) => {
     )
   }catch(error){
     console.log(error)
-    return null
-  }
+    return null
+  }
 }

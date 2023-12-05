@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Alert } from 'react-native'
 import { TextInput, Button, Headline } from 'react-native-paper'
 import { useNavigation } from '@react-navigation/native'
 
@@ -14,6 +14,26 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
+
+    const handleLogin= () => {
+
+      login({
+        email: email,
+        password: password
+      }).then( res => {
+        console.log(res);
+  
+        if(res && res.user){
+          setSigned(true);
+          setName(res.user.name);
+          AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+        }else{
+           Alert.alert('Atenção', 'Usuário ou senha inválidos!', [{ text: 'OK' }]);
+
+        }
+  
+      });      
+    }
 
     return (
         <Container>
@@ -47,7 +67,8 @@ const Login = () => {
 
 const styles = StyleSheet.create({
   textHeader:{
-    textAlign:'center'
+    textAlign:'center',
+    marginTop: 200
   }
 })
 
