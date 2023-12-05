@@ -1,3 +1,5 @@
 # Apresentação da Solução
+Link da apresentação: https://docs.google.com/presentation/d/18VSB7-w8TW-bH15T4pJvxYRFlXi30NJTVzYEdyAFtHw/edit?usp=sharing
 
-Faça uma apresentação de um resumo de todos o processo de desenvolvimento e no final apresente a solução desenvolvida, usando um pequeno vídeo.
+# Vídeo de Apresentação Final:
+https://clipchamp.com/watch/SjE6CdVNDpi?utm_source=share&utm_medium=social&utm_campaign=watch
