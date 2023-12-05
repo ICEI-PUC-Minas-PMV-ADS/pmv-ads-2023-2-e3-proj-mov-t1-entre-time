@@ -84,10 +84,22 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 
 ### CT-16 – Editar um evento.
+#### Ao editar um evento todos os campos são setados como "Undefined".
+![Screenshot at Dec 05 17-58-06](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/285d3775-fcc5-46f9-bd3b-7757f745f558)
+![Screenshot at Dec 05 17-58-16](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/8eb00c43-2791-4043-8f30-14b4e39cdcde)
+
 
 ### CT-17 – Excluir um evento.
+#### Ao apertar no botão de excluir na edição do evento ele é deletado com sucesso.
+![Screenshot at Dec 05 17-56-48](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/fe5de6d8-86d4-4361-b67c-d92d02db79d1)
+![Screenshot at Dec 05 17-56-58](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/aaf95f1d-d52a-492e-9732-e889f3ad531d)
+
 
 ### CT-18 – Tentar cadastrar evento faltando informação.
+#### Ao cadastrar um evento sem os campos necessários o evento é cadastrado com os campos "Null".
+![Screenshot at Dec 05 17-54-25](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/2ce00ae7-fbd4-4ee9-8871-c903353a7233)
+![Screenshot at Dec 05 17-54-54](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/28e8a332-106a-4074-be94-0877f6fd40d9)
+
 
 ### CT-19 – Consulta por datas.
 
