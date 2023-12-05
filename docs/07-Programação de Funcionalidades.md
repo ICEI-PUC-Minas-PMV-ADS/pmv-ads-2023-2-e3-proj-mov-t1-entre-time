@@ -222,121 +222,6 @@ Resultando na seguinte tela:
 
 <img width="555" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/103105356/98fbe3d0-056b-45ed-bcca-2136c1d2be54">
 
-## Crud Usuário
-### Responsável: Stephanye Castellano
-Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado um "esqueleto" do crud de Usuários por meio do site https://snack.expo.dev/. Utilização do Json Server para Salvar os usuarios no banco de dados. Visualmente nao teve alteração. Ajustes nos Planos de Testes de Software e de Usabilidade
-
-```
-import React, { useState } from 'react'
-import { View, FlatList, Text } from 'react-native'
-import {Appbar, TextInput, Button} from 'react-native-paper'
-
-const UsuarioCrud = () => {
-  const [usuarios, setUsuarios] = useState([])
-  const [id, setId] = useState('')
-  const [nome, setNome] = useState('')
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
-  const [confirmarSenha, setConfirmarSenha] = useState('')
-  const [tipoUsuario, setTipoUsuario] = useState(false)
-
-  const generateGuid = () => {
-    const S4 = () =>
-      (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
-    return `${S4()}${S4()}-${S4()}-${S4()}-${S4()}-${S4()}${S4()}${S4()}`
-  }
-
-  const adicionarUsuario = () => {
-    if (
-      nome.trim() === '' ||
-      email.trim() === '' ||
-      senha.trim() === '' ||
-      confirmarSenha.trim() === ''
-    ) {
-      alert('Por favor, preencha todos os campos.')
-      return;
-    }
-
-    if (senha !== confirmarSenha) {
-      alert('As senhas não coincidem.')
-      return
-    }
-
-    const novoUsuario = {
-      id: generateGuid(),
-      nome,
-      email,
-      senha,
-      tipoUsuario
-    }
-
-    setUsuarios([...usuarios, novoUsuario])
-    limparFormulario()
-  }
-
-  const limparFormulario = () => {
-    setId('')
-    setNome('')
-    setEmail('')
-    setSenha('')
-    setConfirmarSenha('')
-    setTipoUsuario(false)
-  }
-
-  return (
-    <View>
-      <Appbar.Header>
-        <Appbar.Content title="Cadastrar Novo Usuario" />
-      </Appbar.Header>
-      
-        <TextInput
-          label="Nome"
-          value={nome}
-          onChangeText={(text) => setNome(text)}
-        />
-
-        <TextInput 
-          label="Email"
-          value={email}
-          onChangeText={(text) => setEmail(text)} 
-        />
-
-        <TextInput
-          label="Senha"
-          value={senha}
-          onChangeText={(text) => setSenha(text)}
-          secureTextEntry
-        />
-
-        <TextInput
-          label="Confirmar Senha"
-          value={confirmarSenha}
-          onChangeText={(text) => setConfirmarSenha(text)}
-          secureTextEntry
-        />
-
-        <Button mode="contained" title="Adicionar Usuário" onPress={adicionarUsuario}> Criar Usuário</Button>
-
-        <FlatList
-          data={usuarios}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <View>
-              <Text>{`ID: ${item.id}, Nome: ${item.nome}, Email: ${item.email}`}</Text>
-            </View>
-          )}
-        />
-      </View>
-  )
-}
-
-export default UsuarioCrud
-
-```
-Vídeo do funcionamento do Cadastro de Usuário 
-
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/b2aeae05-a7d9-40b7-9ed1-2f5ca6dcad11
-
 ## Tela 'Menu Lateral'
 ### Responsável: Pedro Henrique
 
@@ -415,9 +300,309 @@ export default function App() {
   );
 }
 ```
-Vídeo do resultado até o momento:
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/112659128/f7d19ea8-24cc-4fd5-9828-45bba2ac72b5
+## Cadastro de Usuário e Login
+### Responsável: Stephanye Castellano
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas foi gerado a Tela de Login e o Cadastro de Usuários
+
+```
+import React, { useState } from 'react'
+import { StyleSheet, Alert } from 'react-native'
+import { TextInput, Button, Headline } from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native'
+
+import Container from '../components/Container'
+import Body from '../components/Body'
+import Input from '../components/Input'
+import { useUser } from '../contexts/UserContext'
+
+const Login = () => {   
+    const navigation = useNavigation()
+    const {setSigned} = useUser()
+
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+
+    const handleLogin= () => {
+
+      login({
+        email: email,
+        password: password
+      }).then( res => {
+        console.log(res);
+  
+        if(res && res.user){
+          setSigned(true);
+          setName(res.user.name);
+          AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+        }else{
+           Alert.alert('Atenção', 'Usuário ou senha inválidos!', [{ text: 'OK' }]);
+
+        }
+  
+      });      
+    }
+
+    return (
+        <Container>
+          <Headline style={styles.textHeader}> Login </Headline>
+            <Body>              
+
+              <TextInput
+                  label="Email"
+                  value={email}
+                  onChangeText={(text) => setEmail(text)}
+                  left={<TextInput.Icon name="account" />}
+              />
+
+              <TextInput
+                  label="Senha"
+                  value={senha}
+                  onChangeText={(text) => setSenha(text)}
+                  left={<TextInput.Icon name="key" />}
+                  secureTextEntry
+              />
+              <Button mode="contained" onPress={() => setSigned(true)}>
+                  LOGIN
+              </Button>
+              <Button mode="outline" onPress={() => navigation.navigate('Register')}>
+                  Registrar
+              </Button>
+            </Body>
+        </Container>
+    )
+}
+
+const styles = StyleSheet.create({
+  textHeader:{
+    textAlign:'center',
+    marginTop: 200
+  }
+})
+
+export default Login
+
+```
+
+```
+import React, { useState } from 'react';
+import { View, FlatList, Text, StyleSheet, Alert } from 'react-native';
+import { Appbar, TextInput, Button, RadioButton } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
+import { register } from '../services/auth.services';
+
+const Register = () => {
+  const navigation = useNavigation();
+
+  const [usuarios, setUsuarios] = useState([]);
+  const [id, setId] = useState('');
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [tipoUsuario, setTipoUsuario] = useState(false);
+
+  const handleRegister = () => {
+    register({
+      nome: nome,
+      email: email,
+      password: senha,
+      confirmarSenha: confirmarSenha,
+      tipoUsuario: tipoUsuario,
+    }).then(res => {
+        console.log(res)
+
+        if(res){
+          Alert.alert('Atenção','Usuário cadastrado com sucesso!', [{text:"OK", onPress: () => navigation.goBack()}])
+        } else {
+          Alert.alert('Atenção', 'Usuário não cadastrado! Tente novamente mais tarde =D')
+        }
+    })
+  }
+
+  const generateGuid = () => {
+    const S4 = () =>
+      (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+    return `${S4()}${S4()}-${S4()}-${S4()}-${S4()}-${S4()}${S4()}${S4()}`;
+  };
+
+  const adicionarUsuario = () => {
+    if (
+      nome.trim() === '' ||
+      email.trim() === '' ||
+      senha.trim() === '' ||
+      confirmarSenha.trim() === ''
+    ) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    if (senha !== confirmarSenha) {
+      alert('As senhas não coincidem.');
+      return;
+    }
+
+    const novoUsuario = {
+      id: generateGuid(),
+      nome,
+      email,
+      senha,
+      tipoUsuario,
+    };
+
+    setUsuarios([...usuarios, novoUsuario]);
+    limparFormulario();
+  };
+
+  const limparFormulario = () => {
+    setId('');
+    setNome('');
+    setEmail('');
+    setSenha('');
+    setConfirmarSenha('');
+    setTipoUsuario(false);
+  };
+
+  return (
+    <View>
+      <Appbar.Header>
+        <Appbar.Content title="Cadastrar Novo Usuario" />
+      </Appbar.Header>
+
+      <TextInput
+        label="Nome"
+        value={nome}
+        onChangeText={(text) => setNome(text)}
+        left={<TextInput.Icon name="account" />}
+      />
+
+      <TextInput
+        label="Email"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+        left={<TextInput.Icon name="email" />}
+      />
+
+      <TextInput
+        label="Senha"
+        value={senha}
+        onChangeText={(text) => setSenha(text)}
+        left={<TextInput.Icon name="key" />}
+        secureTextEntry
+      />
+
+      <TextInput
+        label="Confirmar Senha"
+        value={confirmarSenha}
+        onChangeText={(text) => setConfirmarSenha(text)}
+        left={<TextInput.Icon name="key" />}
+        secureTextEntry
+      />
+
+      <View>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <RadioButton
+            value={false}
+            status={tipoUsuario === false ? 'checked' : 'unchecked'}
+            onPress={() => setTipoUsuario(false)}
+          />
+          <Text>Consumidor</Text>
+        </View>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <RadioButton
+            value={true}
+            status={tipoUsuario === true ? 'checked' : 'unchecked'}
+            onPress={() => setTipoUsuario(true)}
+          />
+          <Text>Empreendedor</Text>
+        </View>
+      </View>
+
+      <Button
+        style={styles.button}
+        mode="contained"
+        title="Adicionar Usuário"
+        onPress={handleRegister}>
+        {' '}
+        Criar Usuário
+      </Button>
+
+      <Button
+        style={styles.button}
+        mode="contained"
+        title="Cancelar"
+        onPress={() => navigation.goBack()}>
+        {' '}
+        Cancelar{' '}
+      </Button>
+
+      <FlatList
+        data={usuarios}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View>
+            <Text>{`ID: ${item.id}, Nome: ${item.nome}, Email: ${item.email}, Tipo de Usuario: ${item.tipoUsuario}`}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  button: {
+    marginBottom: 8,
+  },
+});
+
+export default Register
+```
+
+```
+import React, { createContext, useState, useContext } from 'react';
+
+import PropTypes from 'prop-types';
+
+export const UserContext = createContext();
+
+export default function UserProvider({ children }) {
+  const [signed, setSigned] = useState(false);
+  const [name, setName] = useState(false);
+
+  return (
+    <UserContext.Provider
+      value={{
+        signed,
+        setSigned,
+        name,
+        setName
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
+}
+
+UserProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export function useUser() {
+  const context = useContext(UserContext);
+
+  if (!context) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+
+  const { signed, setSigned, name, setName } = context;
+  return { signed, setSigned, name, setName };
+}
+```
+Imagens do Resultado Final:
+![Cadastrar Novo Usuário](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/f79871e7-6a96-48ba-8171-a176dab5b0d9)
+
+![Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/53917285/33f60ad4-c06c-45b3-832e-d30e8e305955)
 
 
 ## Tela 'FAQ'
