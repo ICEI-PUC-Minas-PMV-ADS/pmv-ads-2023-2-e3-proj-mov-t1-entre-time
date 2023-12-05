@@ -46,10 +46,13 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 
 ### CT-06 – Cadastro de usuário.
+![Usuário cadastrado com sucesso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/fecbe880-beb1-49a7-81f8-ac0b51ab072d)
 
 ### CT-07 – Tentar criar usuário com campos vazios.
+![Usuário não cadastrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/828e10b0-d74b-4dbb-9e1c-f09e0b13d277)
 
 ### CT-08 – Tentar criar usuário com campos senha e Confirmar senha diferentes.
+![As senhas não coincidem](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/98750413/6d0a447d-39e9-4468-a48e-6e1abb77a944)
 
 ### CT-09 – Editar usuário.
 
