@@ -63,7 +63,22 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 ### CT-14 – Acessar Tela de Suporte/Dúvidas.
 
+#### Apertando na opção Faq no menu de navegação a tela de dúvidas é exibida.
+
+![Screenshot at Dec 04 22-59-41](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/046dea57-d230-41b9-bccc-30c1d0ad16a7)
+![Screenshot at Dec 04 22-59-59](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/1209fb6a-3a72-4c3d-bd1f-d8cfc92ffff2)
+
 ### CT-15 – Cadastro de eventos.
+
+#### Apertando no botão + é possivel adicionar um evento.
+
+![Screenshot at Dec 04 23-02-25](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/b72d1a9e-058e-4a3d-978b-9aece132f7b4)
+
+#### Preenchendo os campos o evento é cadastrado.
+
+![Screenshot at Dec 04 23-04-34](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/e0f4087b-a71e-40a7-8589-e611c1bd545e)
+![Screenshot at Dec 04 23-04-55](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/82223068/3acd8391-63df-44cd-ae1d-44a6b08d4d45)
+
 
 ### CT-16 – Editar um evento.
 
