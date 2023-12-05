@@ -3,108 +3,140 @@
 ## Tela 'Home'
 ### Responsável: Matheus Delay
 
-Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas estou desenvolvendo a tela 'Home' por meio do site https://snack.expo.dev/. A barra de pesquisa ja está funcional filtrando a pesquisa pelo titulo do evento ou descrição. Resta agora desenvolver a funcionalidade de filtrar os eventos com base em sua localização.
+Em consulta ao microfundamento "Desenvolvimento de Aplicações Móveis" e fontes externas estou desenvolvendo a tela 'Home' por meio do site https://snack.expo.dev/. A barra de pesquisa ja está funcional filtrando a pesquisa pelo titulo do evento, local, data e cidade conforme solicitado nos requisitos.
 
-Até o momento foi gerado o seguinte código:
+O código final ficou:
 ```
-import React, { useState, useEffect } from 'react';
-import { Platform, View, Text, FlatList, StyleSheet, StatusBar } from 'react-native';
-import { Appbar, Avatar, Searchbar } from 'react-native-paper';
+import React, { useEffect, useState } from 'react';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { Appbar, List, Searchbar, FAB as Fab } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { getEventos } from '../services/Eventos.Services';
 
-const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
-
-const DATA = [
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Primeiro Evento',
-    description: 'Av. Cândido Hartmann, S/N - Bigorrilho, Curitiba - PR, 82025-160',
-  },
-  {
-    id: 'bd7acaea-c1b4-46c2-aee5-3ad53abd28ba',
-    title: 'Segundo Evento',
-    description: 'R. Jorge Alves Hathy, 117 - Jardim da Colina, Campina Grande do Sul - PR, 83430-000',
-  },
-  {
-    id: 'bd7bdaea-c1b4-46c2-aee5-3ad53aed28ba',
-    title: 'Terceiro Evento',
-    description: 'R. Júlio César Setenareski, 150 - Col. Mergulhão, São José dos Pinhais - PR, 83085-290',
-  },
-];
-
-const Item = ({ title, description }) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-    <Text style={styles.description}>{description}</Text>
-  </View>
-);
-
-const Home = () => {
+const Eventos = () => {
+  const navigation = useNavigation();
+  const [eventos, setEventos] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredData, setFilteredData] = useState(DATA);
+  const [filteredEventos, setFilteredEventos] = useState([]);
 
   useEffect(() => {
-    const filteredEvents = DATA.filter((event) =>
-      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredData(filteredEvents);
-  }, [searchQuery]);
+    getEventos().then(dados => {
+      setEventos(dados);
+      setFilteredEventos(dados);
+    });
+  }, []);
 
-  const onChangeSearch = (query) => {
-    setSearchQuery(query);
-  };
+  const handleSearch = query => {
+  setSearchQuery(query);
+  const filteredData = eventos.filter(
+    evento =>
+      (evento.nomeEvento && evento.nomeEvento.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.nomeLocal && evento.nomeLocal.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.cidade && evento.cidade.toLowerCase().includes(query.toLowerCase())) ||
+      (evento.dataInicioEvento && evento.dataInicioEvento.toLowerCase().includes(query.toLowerCase()))
+  );
+  setFilteredEventos(filteredData);
+};
 
   const renderItem = ({ item }) => (
-    <Item title={item.title} description={item.description} />
+    <List.Item style={styles.item}
+      
+
+      titleNumberOfLines={2}
+      descriptionNumberOfLines={6}
+      left={(props) => (
+        <Text {...props} style={styles.title} >
+          {'\n' +
+            item.nomeEvento +
+            '\n' +
+            'Local: ' +
+            item.nomeLocal +
+            '\n' +
+            'Endereço: ' +
+             item.endereco +
+        ' - ' +
+        item.bairro +
+        ', ' +
+        item.cidade +
+        ' - ' +
+        item.estado +
+        '\n'}
+        </Text>
+      )}
+      right={(props) => (
+        <Text {...props} style={styles.description} >
+          {'\n' +
+            'Data: ' +
+            item.dataInicioEvento +
+            '\n' +
+            'Horário: ' +
+            item.horaInicioEvento +
+            '\n' +
+            'Entrada: R$:' +
+            item.valorEntrada}
+        </Text>
+      )}
+      onPress={() => navigation.navigate('Adicionar Eventos', { item })}
+    />
   );
 
   return (
-    <>
+    <View style={{ flex: 1 }}>
       <Appbar.Header>
         <Appbar.Action icon="menu" onPress={() => {}} />
-        <Avatar.Image size={38} source={require('../assets/Screenshot_2.png')} />
         <Appbar.Content title="Menu Eventos" />
         <Appbar.Action icon="account-box" onPress={() => {}} />
       </Appbar.Header>
-      <Searchbar
-        placeholder="Pesquisar"
-        onChangeText={onChangeSearch}
-        value={searchQuery}
-      />
-      <View style={styles.container}>
-        <FlatList
-          data={filteredData}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+
+      <View style={{ paddingHorizontal: 10 }}>
+        <Searchbar
+          placeholder="Pesquise pelo evento"
+          onChangeText={handleSearch}
+          value={searchQuery}
         />
       </View>
-    </>
+
+      <FlatList
+        data={filteredEventos}
+        renderItem={renderItem}
+        keyExtractor={item => item.id.toString()}
+      />
+
+      <Fab
+        style={styles.Fab}
+        small
+        icon="plus"
+        onPress={() => navigation.navigate('Adicionar Eventos')}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+  Fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
   },
   item: {
     backgroundColor: '#5c1ae8',
     padding: 20,
     marginVertical: 8,
-    marginHorizontal: 16,
-    borderRadius: 10,
+    marginHorizontal: 12,
+    borderRadius: 16,
   },
   title: {
-    fontSize: 32,
+    fontSize: 14,
     color: 'white',
   },
   description: {
-    fontSize: 16,
+    fontSize: 12,
     color: 'white',
   },
 });
 
-export default Home;
+export default Eventos;
 ```
 Resultando na seguinte tela:
 
