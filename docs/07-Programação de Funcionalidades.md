@@ -140,7 +140,7 @@ export default Eventos;
 ```
 Resultando na seguinte tela:
 
-![Imagem do WhatsApp de 2023-10-15 à(s) 08 27 55_b769926e](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/22a40f16-010c-4040-9413-a7c3cb3ab786)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/ec7b7fc4-8eeb-40e2-95c2-9cc1504396ce)
 
 
 ## Tela 'Fale Conosco'
