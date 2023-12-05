@@ -33,7 +33,17 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 ### CT-04 – Buscar eventos de um local específico.
 
+#### Da mesma maneira que o segundo plano de teste, ao pesquisar por um ou mais eventos que irão ocorrer no mesmo local / estabelecimento ele será apresentado.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/fcb77d97-f8fc-4dc8-8af4-9a805fc43edc)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/8019d18e-5e17-4c2f-844a-dab06a44e5ed)
+
+
 ### CT-05 – Pesquisar eventos de outra cidade.
+
+#### Pesquisando pela cidade do evento também é possível filtrar.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/83318699-b9ea-4012-8d9a-c27768d11b2c)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/9f71673a-1ec2-4f82-b0e9-cc12a2fb4b35)
+
 
 ### CT-06 – Pesquisar eventos pela quilometragem.
 
