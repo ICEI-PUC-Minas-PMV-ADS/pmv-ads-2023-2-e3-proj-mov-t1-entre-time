@@ -73,5 +73,10 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 ### CT-19 – Consulta por datas.
 
+#### Ao consultar a data de um evento também é possível filtrar os eventos pela data, conforme abaixo.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/0a97f289-d6b4-4829-b5bf-e8cce4523ce4)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time/assets/113395332/29a97e5f-89f3-4dfa-9dd6-f595a1991833)
+
+
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
