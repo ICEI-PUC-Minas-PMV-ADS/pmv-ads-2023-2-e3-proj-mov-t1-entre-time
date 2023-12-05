@@ -10,7 +10,7 @@ import {login} from '../services/auth.services';
 
 const Login = () => {   
     const navigation = useNavigation()
-    const {setSigned} = useUser()
+    const {setSigned, setName} = useUser()
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -19,7 +19,7 @@ const Login = () => {
 
       login({
         email: email,
-        password: password
+        password: senha
       }).then( res => {
         console.log(res);
   
@@ -33,6 +33,11 @@ const Login = () => {
         }
   
       });      
+    }
+    const handleLoginAndSetSigned = () => {
+      handleLogin();
+
+      setSigned(true);
     }
 
     return (
@@ -54,9 +59,10 @@ const Login = () => {
                   left={<TextInput.Icon name="key" />}
                   secureTextEntry
               />
-              <Button mode="contained" onPress={() => setSigned(true)}>
+              <Button mode="contained" onPress={handleLoginAndSetSigned}>
                   LOGIN
               </Button>
+              
               <Button mode="outline" onPress={() => navigation.navigate('Register')}>
                   Registrar
               </Button>
