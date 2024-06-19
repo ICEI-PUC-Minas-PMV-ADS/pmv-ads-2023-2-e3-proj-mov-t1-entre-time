@@ -1,0 +1,24 @@
+message: Please cite this software using these metadata.
+title: EntreTime
+authors:
+  - family-names: Mendes Rufino Silva
+    given-names: Daniel 
+  - family-names: Felix dos Santos
+    given-names: Jeferson 
+  - family-names: Delay da Silva
+    given-names: Matheus 
+  - family-names: Henrique da Silva Santos 
+    given-names: Pedro  
+  - family-names: Castellano
+    given-names: Stephanye 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ricardo dos Santos Machado
+    given-names: Will    
+keywords:
+  - Divulgação de eventos locais
+  - Bares, restaurantes, clubs
+  - Eventos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time
+version: 2.0.0
+date-released: 2023-12-08
