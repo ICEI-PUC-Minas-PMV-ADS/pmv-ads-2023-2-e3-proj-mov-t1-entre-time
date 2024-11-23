@@ -1,4 +1,5 @@
-message: Please cite this software using these metadata.
+cff-version: 1.0.1
+message: Sistema para divulgação de eventos locais
 title: EntreTime
 authors:
   - family-names: Mendes Rufino Silva
@@ -14,11 +15,14 @@ authors:
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Ricardo dos Santos Machado
-    given-names: Will    
+    given-names: Will  
 keywords:
-  - Divulgação de eventos locais
-  - Bares, restaurantes, clubs
-  - Eventos
+  - eventos locais
+  - agenda de eventos na cidade
+  - divulgação de eventos locais
+  - eventos próximos a você
+  - plataforma de eventos locais
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-entre-time
+license: CC-BY-4.0
 version: 2.0.0
 date-released: 2023-12-08
